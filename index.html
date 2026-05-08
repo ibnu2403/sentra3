@@ -1,0 +1,2446 @@
+bash
+
+cat > /home/claude/sentra-timber-premium.html << 'HTMLEOF'
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sentra Timber Nusantara Lestari — Panduan Distribusi Serbuk Kayu Profesional</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   ROOT VARIABLES — PREMIUM DARK WEB3 GLASS THEME
+   ============================================================ */
+:root {
+  /* Core Palette — deep forest dark with warm gold */
+  --midnight: #070A0D;
+  --deep: #0C1015;
+  --surface-1: #111820;
+  --surface-2: #162030;
+  --surface-3: #1C2A3A;
+
+  --gold: #C9960C;
+  --gold-bright: #F0BC2E;
+  --gold-glow: rgba(201,150,12,0.25);
+  --gold-trace: rgba(240,188,46,0.08);
+
+  --leaf: #14B87B;
+  --leaf-dim: rgba(20,184,123,0.15);
+  --leaf-trace: rgba(20,184,123,0.06);
+
+  --danger: #E05252;
+  --danger-dim: rgba(224,82,82,0.12);
+  --amber: #E8922A;
+  --amber-dim: rgba(232,146,42,0.12);
+
+  --text: #F0EDE8;
+  --text-2: #B8B0A4;
+  --text-3: #786E64;
+
+  --glass-bg: rgba(255,255,255,0.04);
+  --glass-bg-hover: rgba(255,255,255,0.07);
+  --glass-border: rgba(255,255,255,0.08);
+  --glass-border-hover: rgba(240,188,46,0.3);
+  --glass-shine: rgba(255,255,255,0.06);
+
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  --shadow-glass: 0 8px 32px rgba(0,0,0,0.4), 0 1px 0 rgba(255,255,255,0.06) inset;
+  --shadow-glow: 0 0 60px rgba(201,150,12,0.12);
+  --shadow-deep: 0 24px 80px rgba(0,0,0,0.5);
+  --shadow-card: 0 4px 24px rgba(0,0,0,0.3);
+
+  --radius: 16px;
+  --radius-sm: 10px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+
+  --nav-h: 68px;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --t: 0.45s var(--ease-out);
+  --t-fast: 0.2s ease;
+}
+
+/* ============================================================
+   RESET
+   ============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: var(--font-body);
+  background: var(--midnight);
+  color: var(--text);
+  line-height: 1.75;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ============================================================
+   CUSTOM SCROLLBAR
+   ============================================================ */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: var(--deep); }
+::-webkit-scrollbar-thumb { background: linear-gradient(var(--gold),var(--leaf)); border-radius: 3px; }
+
+/* ============================================================
+   PAGE TRANSITION OVERLAY
+   ============================================================ */
+#page-overlay {
+  position: fixed; inset: 0;
+  background: linear-gradient(135deg, var(--midnight) 0%, #0A1A0F 100%);
+  z-index: 9999;
+  pointer-events: none;
+  display: flex; align-items: center; justify-content: center;
+  animation: overlayOut 1.2s 0.3s var(--ease-out) forwards;
+}
+#page-overlay .overlay-logo {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--gold-bright);
+  letter-spacing: -0.02em;
+  animation: overlayLogoIn 0.8s 0.1s both;
+}
+@keyframes overlayLogoIn {
+  from { opacity: 0; transform: translateY(20px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+@keyframes overlayOut {
+  0% { opacity: 1; }
+  70% { opacity: 1; transform: scaleY(1); }
+  100% { opacity: 0; transform: scaleY(0); transform-origin: top; pointer-events: none; }
+}
+
+/* ============================================================
+   AMBIENT BACKGROUND
+   ============================================================ */
+body::before {
+  content: '';
+  position: fixed; inset: 0;
+  background:
+    radial-gradient(ellipse 70% 50% at 5% 0%, rgba(201,150,12,0.06) 0%, transparent 55%),
+    radial-gradient(ellipse 50% 60% at 95% 100%, rgba(20,184,123,0.05) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 40% at 50% 50%, rgba(201,150,12,0.025) 0%, transparent 60%);
+  pointer-events: none; z-index: 0;
+}
+
+/* Animated grid pattern */
+body::after {
+  content: '';
+  position: fixed; inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.018) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.018) 1px, transparent 1px);
+  background-size: 60px 60px;
+  pointer-events: none; z-index: 0;
+  mask-image: radial-gradient(ellipse at 50% 50%, black 20%, transparent 80%);
+}
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+#main-nav {
+  position: fixed; top: 0; left: 0; right: 0;
+  height: var(--nav-h);
+  z-index: 1000;
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  background: rgba(7,10,13,0.7);
+  border-bottom: 1px solid var(--glass-border);
+  transition: all var(--t);
+}
+#main-nav::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201,150,12,0.4), transparent);
+  opacity: 0;
+  transition: opacity var(--t);
+}
+#main-nav.scrolled::after { opacity: 1; }
+#main-nav.scrolled {
+  background: rgba(7,10,13,0.92);
+}
+
+.nav-inner {
+  max-width: 1400px; margin: 0 auto;
+  padding: 0 32px; height: 100%;
+  display: flex; align-items: center; gap: 24px;
+}
+
+.nav-brand {
+  flex-shrink: 0;
+  display: flex; flex-direction: column; line-height: 1.15;
+  text-decoration: none;
+}
+.nav-brand-main {
+  font-family: var(--font-display);
+  font-size: 0.9rem; font-weight: 700;
+  color: var(--text); letter-spacing: -0.01em;
+}
+.nav-brand-sub {
+  font-family: var(--font-mono);
+  font-size: 0.58rem; color: var(--gold);
+  letter-spacing: 0.1em; text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex; align-items: center; gap: 2px; flex: 1;
+  overflow-x: auto; scrollbar-width: none;
+}
+.nav-links::-webkit-scrollbar { display: none; }
+
+.nav-link {
+  font-family: var(--font-body);
+  font-size: 0.78rem; font-weight: 500;
+  color: var(--text-3); text-decoration: none;
+  padding: 6px 12px; border-radius: 30px;
+  white-space: nowrap; transition: all var(--t-fast);
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  position: absolute; bottom: 2px; left: 50%; right: 50%;
+  height: 2px; background: var(--gold);
+  border-radius: 2px;
+  transition: all var(--t-fast); opacity: 0;
+}
+.nav-link:hover { color: var(--text); }
+.nav-link.active { color: var(--gold-bright); }
+.nav-link.active::after { left: 12px; right: 12px; opacity: 1; }
+
+.nav-print-btn {
+  flex-shrink: 0;
+  font-family: var(--font-mono); font-size: 0.68rem;
+  padding: 7px 16px; border-radius: 30px;
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg); color: var(--text-2);
+  cursor: pointer; letter-spacing: 0.06em;
+  transition: all var(--t-fast);
+}
+.nav-print-btn:hover {
+  background: var(--gold);
+  color: var(--midnight); border-color: var(--gold);
+  box-shadow: 0 0 20px var(--gold-glow);
+}
+
+/* ============================================================
+   PROGRESS TRACKER DOT
+   ============================================================ */
+#progress-tracker {
+  position: fixed; right: 20px; top: 50%;
+  transform: translateY(-50%);
+  z-index: 100; display: flex; flex-direction: column; gap: 8px;
+  opacity: 0; transition: opacity var(--t);
+}
+#progress-tracker.visible { opacity: 1; }
+.tracker-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--surface-3); cursor: pointer;
+  transition: all var(--t-fast); position: relative;
+}
+.tracker-dot::after {
+  content: attr(data-label);
+  position: absolute; right: 16px; top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap; font-family: var(--font-mono);
+  font-size: 0.62rem; color: var(--text-2);
+  background: rgba(12,16,21,0.95);
+  backdrop-filter: blur(10px);
+  padding: 4px 10px; border-radius: 6px;
+  border: 1px solid var(--glass-border);
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.2s;
+}
+.tracker-dot:hover::after { opacity: 1; }
+.tracker-dot.active {
+  background: var(--gold);
+  transform: scale(1.5);
+  box-shadow: 0 0 10px var(--gold-glow);
+}
+
+/* ============================================================
+   SECTION WRAPPER
+   ============================================================ */
+.section {
+  position: relative; z-index: 1;
+  padding: 120px 32px; max-width: 1200px; margin: 0 auto;
+  opacity: 0; transform: translateY(50px);
+  transition: opacity 0.9s var(--ease-out), transform 0.9s var(--ease-out);
+}
+.section.visible { opacity: 1; transform: translateY(0); }
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--gold);
+  margin-bottom: 14px;
+  display: flex; align-items: center; gap: 12px;
+}
+.section-label::before {
+  content: ''; width: 32px; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold));
+  opacity: 0.6;
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4.5vw, 3.2rem);
+  font-weight: 800; color: var(--text);
+  line-height: 1.1; margin-bottom: 16px;
+  letter-spacing: -0.03em;
+}
+.section-subtitle {
+  font-size: 1rem; color: var(--text-2);
+  max-width: 580px; font-style: italic;
+}
+
+/* ============================================================
+   GLASS CARD SYSTEM
+   ============================================================ */
+.glass-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px) saturate(150%);
+  -webkit-backdrop-filter: blur(20px) saturate(150%);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-glass);
+  transition: all var(--t);
+  position: relative; overflow: hidden;
+}
+.glass-card::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--glass-shine), transparent);
+}
+.glass-card:hover {
+  border-color: var(--glass-border-hover);
+  background: var(--glass-bg-hover);
+  box-shadow: var(--shadow-glass), 0 0 40px var(--gold-trace);
+  transform: translateY(-3px);
+}
+
+.glass-card-leaf {
+  background: var(--leaf-trace);
+  border-color: rgba(20,184,123,0.15);
+}
+.glass-card-danger {
+  background: var(--danger-dim);
+  border-color: rgba(224,82,82,0.15);
+}
+.glass-card-amber {
+  background: var(--amber-dim);
+  border-color: rgba(232,146,42,0.15);
+}
+.glass-card-gold {
+  background: var(--gold-trace);
+  border-color: rgba(201,150,12,0.2);
+}
+.glass-card-dark {
+  background: rgba(6,8,10,0.7);
+  border-color: rgba(201,150,12,0.15);
+}
+
+/* ============================================================
+   3D TILT CARD
+   ============================================================ */
+.tilt-card { transform-style: preserve-3d; }
+
+/* ============================================================
+   BADGE SYSTEM
+   ============================================================ */
+.badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-family: var(--font-mono); font-size: 0.6rem;
+  font-weight: 500; letter-spacing: 0.1em;
+  text-transform: uppercase; padding: 3px 10px;
+  border-radius: 30px;
+}
+.badge-wajib { background: var(--danger-dim); color: var(--danger); border: 1px solid rgba(224,82,82,0.2); }
+.badge-protip { background: var(--leaf-dim); color: var(--leaf); border: 1px solid rgba(20,184,123,0.2); }
+.badge-perhatian { background: var(--amber-dim); color: var(--amber); border: 1px solid rgba(232,146,42,0.2); }
+.badge-opsional { background: var(--glass-bg); color: var(--text-3); border: 1px solid var(--glass-border); }
+
+/* ============================================================
+   RIPPLE EFFECT
+   ============================================================ */
+.ripple-wrap { position: relative; overflow: hidden; }
+.ripple {
+  position: absolute; border-radius: 50%;
+  background: rgba(240,188,46,0.2);
+  transform: scale(0);
+  animation: rippleAnim 0.7s linear;
+  pointer-events: none;
+}
+@keyframes rippleAnim { to { transform: scale(4); opacity: 0; } }
+
+/* ============================================================
+   HERO SECTION
+   ============================================================ */
+#hero {
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+  padding: 0; margin: 0; max-width: 100%;
+  opacity: 1; transform: none;
+}
+
+.hero-bg {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 100% 80% at 50% 0%, #0E1C0A 0%, var(--midnight) 70%);
+}
+
+/* Animated grain overlay */
+.hero-bg::before {
+  content: '';
+  position: absolute; inset: -200%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+  background-size: 200px 200px;
+  opacity: 0.4;
+  animation: grainMove 0.5s steps(2) infinite;
+}
+@keyframes grainMove {
+  0% { transform: translate(0,0); }
+  25% { transform: translate(-2%, 3%); }
+  50% { transform: translate(3%, -1%); }
+  75% { transform: translate(-1%, -3%); }
+  100% { transform: translate(2%, 2%); }
+}
+
+.hero-bg::after {
+  content: '';
+  position: absolute; bottom: 0; left: 0; right: 0; height: 40%;
+  background: linear-gradient(to top, var(--midnight), transparent);
+}
+
+/* Floating orbs */
+.hero-orb {
+  position: absolute; border-radius: 50%;
+  filter: blur(80px); animation: orbFloat 14s ease-in-out infinite;
+}
+.hero-orb-1 {
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(201,150,12,0.12) 0%, transparent 70%);
+  top: -150px; right: -100px; animation-delay: 0s;
+}
+.hero-orb-2 {
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(20,184,123,0.1) 0%, transparent 70%);
+  bottom: 0; left: -50px; animation-delay: -5s;
+}
+.hero-orb-3 {
+  width: 350px; height: 350px;
+  background: radial-gradient(circle, rgba(201,150,12,0.07) 0%, transparent 70%);
+  top: 50%; left: 55%; animation-delay: -10s;
+}
+@keyframes orbFloat {
+  0%, 100% { transform: translate(0,0) scale(1); }
+  33% { transform: translate(40px,-40px) scale(1.06); }
+  66% { transform: translate(-25px, 25px) scale(0.94); }
+}
+
+/* 3D Rotating ring */
+.hero-ring {
+  position: absolute;
+  width: 700px; height: 700px;
+  border-radius: 50%;
+  border: 1px solid rgba(201,150,12,0.08);
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) rotateX(70deg);
+  animation: ringRotate 25s linear infinite;
+  pointer-events: none;
+}
+.hero-ring-2 {
+  width: 900px; height: 900px;
+  border-color: rgba(20,184,123,0.05);
+  animation: ringRotate 40s linear infinite reverse;
+}
+@keyframes ringRotate { to { transform: translate(-50%, -50%) rotateX(70deg) rotateZ(360deg); } }
+
+.hero-content {
+  position: relative; z-index: 2;
+  text-align: center; padding: 40px 32px;
+  max-width: 880px;
+}
+
+.hero-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem; letter-spacing: 0.25em;
+  text-transform: uppercase; color: var(--gold);
+  opacity: 0.8; margin-bottom: 28px;
+  animation: fadeSlideUp 1s 0.2s both;
+  display: flex; align-items: center; justify-content: center; gap: 16px;
+}
+.hero-eyebrow::before, .hero-eyebrow::after {
+  content: ''; height: 1px; width: 40px;
+  background: linear-gradient(90deg, transparent, var(--gold));
+  opacity: 0.5;
+}
+.hero-eyebrow::after { transform: scaleX(-1); }
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 800; color: var(--text);
+  line-height: 1.0; letter-spacing: -0.04em;
+  margin-bottom: 10px;
+  animation: fadeSlideUp 1s 0.4s both;
+}
+.hero-title .shimmer-text {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-bright) 40%, #FFF0A0 60%, var(--gold) 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text; background-size: 300% auto;
+  animation: shimmer 5s ease-in-out infinite 1.5s;
+}
+@keyframes shimmer {
+  0%, 100% { background-position: 0% center; }
+  50% { background-position: 100% center; }
+}
+
+.hero-by {
+  font-family: var(--font-display); font-size: 0.95rem;
+  font-style: italic; color: rgba(255,255,255,0.3);
+  margin-bottom: 28px;
+  animation: fadeSlideUp 1s 0.55s both;
+}
+
+.hero-tagline {
+  font-family: var(--font-display); font-style: italic;
+  font-size: clamp(1rem, 2vw, 1.3rem);
+  color: rgba(255,255,255,0.5); margin-bottom: 48px;
+  animation: fadeSlideUp 1s 0.7s both;
+}
+
+.hero-desc {
+  font-size: 1rem; color: var(--text-2);
+  max-width: 560px; margin: 0 auto 56px; line-height: 1.85;
+  animation: fadeSlideUp 1s 0.85s both;
+}
+
+.hero-ctas {
+  display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;
+  animation: fadeSlideUp 1s 1s both;
+}
+
+.btn-primary {
+  font-family: var(--font-display); font-size: 0.9rem; font-weight: 700;
+  padding: 15px 36px; border-radius: 50px;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-bright) 100%);
+  color: var(--midnight); border: none; cursor: pointer;
+  text-decoration: none; display: inline-flex; align-items: center; gap: 10px;
+  transition: all var(--t);
+  box-shadow: 0 4px 20px rgba(201,150,12,0.4), 0 1px 0 rgba(255,255,255,0.2) inset;
+  position: relative; overflow: hidden; letter-spacing: -0.01em;
+}
+.btn-primary::before {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+  opacity: 0; transition: opacity var(--t-fast);
+}
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 40px rgba(201,150,12,0.6), 0 0 0 4px rgba(201,150,12,0.15);
+}
+.btn-primary:hover::before { opacity: 1; }
+.btn-primary:active { transform: translateY(-1px) scale(0.99); }
+.btn-primary span { position: relative; z-index: 1; }
+
+.btn-secondary {
+  font-family: var(--font-body); font-size: 0.9rem; font-weight: 500;
+  padding: 15px 36px; border-radius: 50px;
+  background: var(--glass-bg); backdrop-filter: blur(10px);
+  color: var(--text); border: 1px solid var(--glass-border);
+  cursor: pointer; text-decoration: none;
+  display: inline-flex; align-items: center; gap: 10px;
+  transition: all var(--t);
+}
+.btn-secondary:hover {
+  background: var(--glass-bg-hover);
+  border-color: rgba(201,150,12,0.3); transform: translateY(-2px);
+  box-shadow: 0 0 30px var(--gold-trace);
+}
+
+.hero-metrics {
+  position: relative; z-index: 2;
+  display: grid; grid-template-columns: repeat(4, 1fr);
+  gap: 16px; max-width: 980px; margin: 0 auto;
+  padding: 0 32px 80px;
+  animation: fadeSlideUp 1s 1.2s both;
+}
+
+.metric-card {
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  padding: 24px 18px; text-align: center;
+  transition: all var(--t); position: relative; overflow: hidden;
+  cursor: pointer;
+}
+.metric-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(240,188,46,0.6), transparent);
+}
+.metric-card::after {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(circle at 50% 0%, rgba(201,150,12,0.08) 0%, transparent 70%);
+  opacity: 0; transition: opacity var(--t);
+}
+.metric-card:hover {
+  border-color: rgba(201,150,12,0.3);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 50px rgba(0,0,0,0.4), 0 0 30px var(--gold-trace);
+}
+.metric-card:hover::after { opacity: 1; }
+.metric-icon { font-size: 1.7rem; margin-bottom: 10px; }
+.metric-value {
+  font-family: var(--font-display); font-size: 1.05rem; font-weight: 700;
+  color: var(--gold-bright); margin-bottom: 6px; line-height: 1.2;
+}
+.metric-label {
+  font-family: var(--font-mono); font-size: 0.6rem;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--text-3);
+}
+
+.hero-scroll-hint {
+  position: absolute; bottom: 24px; left: 50%;
+  transform: translateX(-50%); z-index: 2;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  animation: fadeIn 1s 2.2s both;
+}
+.scroll-mouse {
+  width: 22px; height: 36px;
+  border: 1.5px solid rgba(255,255,255,0.2);
+  border-radius: 11px; position: relative;
+}
+.scroll-mouse::before {
+  content: ''; position: absolute;
+  width: 3px; height: 7px;
+  background: var(--gold); border-radius: 2px;
+  top: 6px; left: 50%; transform: translateX(-50%);
+  animation: scrollPulse 2s ease-in-out infinite;
+}
+.scroll-text {
+  font-family: var(--font-mono); font-size: 0.58rem;
+  letter-spacing: 0.2em; color: rgba(255,255,255,0.25);
+  text-transform: uppercase;
+}
+@keyframes scrollPulse {
+  0%, 100% { transform: translateX(-50%) translateY(0); opacity: 1; }
+  50% { transform: translateX(-50%) translateY(7px); opacity: 0.3; }
+}
+
+/* ============================================================
+   SECTION DIVIDER
+   ============================================================ */
+.section-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201,150,12,0.15), transparent);
+  margin: 0;
+}
+
+/* ============================================================
+   FONDASI — SECTION 2
+   ============================================================ */
+.fondasi-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 20px; margin-top: 56px;
+}
+.fondasi-card { padding: 32px 26px; }
+.fondasi-icon { font-size: 2rem; margin-bottom: 18px; display: block; }
+.fondasi-title {
+  font-family: var(--font-display); font-size: 1.1rem; font-weight: 700;
+  color: var(--text); margin-bottom: 22px;
+}
+
+/* Checklist */
+.checklist { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.checklist-item {
+  display: flex; align-items: flex-start; gap: 10px;
+  cursor: pointer; user-select: none; padding: 4px;
+  border-radius: 8px; transition: background 0.15s;
+}
+.checklist-item:hover { background: var(--glass-bg); }
+.checklist-item input[type="checkbox"] { display: none; }
+.check-box {
+  width: 17px; height: 17px; min-width: 17px;
+  border: 1.5px solid var(--surface-3);
+  border-radius: 5px; margin-top: 2px;
+  position: relative; transition: all 0.2s var(--ease-spring);
+  background: var(--glass-bg);
+}
+.checklist-item.checked .check-box {
+  background: var(--leaf); border-color: var(--leaf);
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(20,184,123,0.3);
+}
+.checklist-item.checked .check-box::after {
+  content: '';
+  position: absolute; left: 3px; top: 1px;
+  width: 8px; height: 5px;
+  border-left: 2px solid white; border-bottom: 2px solid white;
+  transform: rotate(-45deg) scale(0);
+  animation: checkAnim 0.2s 0.05s forwards;
+}
+@keyframes checkAnim { to { transform: rotate(-45deg) scale(1); } }
+.check-label { font-size: 0.855rem; color: var(--text-2); line-height: 1.55; transition: color 0.2s; }
+.checklist-item.checked .check-label { color: var(--text-3); text-decoration: line-through; }
+
+/* Prinsip Emas */
+.prinsip-card {
+  margin-top: 56px; padding: 44px 52px;
+  background: rgba(6,8,10,0.8);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(201,150,12,0.2);
+  position: relative; overflow: hidden;
+  box-shadow: var(--shadow-deep), 0 0 80px rgba(201,150,12,0.06);
+}
+.prinsip-card::before {
+  content: '';
+  position: absolute; top: 0; right: -20%; bottom: 0;
+  width: 60%;
+  background: radial-gradient(ellipse at right center, rgba(201,150,12,0.06) 0%, transparent 70%);
+}
+.prinsip-card::after {
+  content: '"';
+  position: absolute; top: -30px; left: 36px;
+  font-family: var(--font-display); font-size: 14rem;
+  color: rgba(201,150,12,0.04); line-height: 1; pointer-events: none;
+}
+.prinsip-header {
+  font-family: var(--font-mono); font-size: 0.68rem;
+  letter-spacing: 0.2em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 28px; position: relative;
+}
+.prinsip-list { list-style: none; display: flex; flex-direction: column; gap: 16px; position: relative; }
+.prinsip-item { display: flex; gap: 18px; align-items: flex-start; }
+.prinsip-num {
+  font-family: var(--font-display); font-size: 1.5rem; font-weight: 800;
+  color: var(--gold); line-height: 1; min-width: 32px; opacity: 0.9;
+}
+.prinsip-text { font-size: 0.93rem; color: var(--text-2); line-height: 1.65; }
+
+/* ============================================================
+   ALUR TRANSAKSI — SECTION 3
+   ============================================================ */
+.timeline { position: relative; margin-top: 56px; }
+.timeline::before {
+  content: ''; position: absolute;
+  left: 29px; top: 0; bottom: 0; width: 1px;
+  background: linear-gradient(to bottom, var(--gold), rgba(20,184,123,0.3), transparent);
+  opacity: 0.3;
+}
+
+.timeline-item { display: flex; gap: 28px; margin-bottom: 20px; position: relative; }
+.timeline-dot { flex-shrink: 0; width: 60px; display: flex; flex-direction: column; align-items: center; }
+.timeline-circle {
+  width: 60px; height: 60px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-size: 1.2rem; font-weight: 800;
+  color: var(--midnight); position: relative; z-index: 1;
+  box-shadow: 0 4px 24px rgba(201,150,12,0.5);
+  transition: all var(--t);
+}
+.timeline-item:hover .timeline-circle {
+  transform: scale(1.1) rotate(8deg);
+  box-shadow: 0 8px 40px rgba(201,150,12,0.7);
+}
+
+.timeline-body { flex: 1; padding: 26px 30px; cursor: pointer; }
+.timeline-step-label {
+  font-family: var(--font-mono); font-size: 0.62rem;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 8px;
+}
+.timeline-title {
+  font-family: var(--font-display); font-size: 1.2rem; font-weight: 700;
+  color: var(--text); margin-bottom: 10px;
+}
+.timeline-summary { font-size: 0.88rem; color: var(--text-2); font-style: italic; }
+
+.timeline-detail { max-height: 0; overflow: hidden; transition: max-height 0.7s var(--ease-out); }
+.timeline-detail.open { max-height: 1200px; }
+.timeline-detail-inner { padding-top: 20px; border-top: 1px solid var(--glass-border); margin-top: 18px; }
+
+.expand-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--font-mono); font-size: 0.68rem;
+  letter-spacing: 0.1em; color: var(--gold);
+  margin-top: 14px; cursor: pointer; border: none;
+  background: none; padding: 0; text-transform: uppercase;
+  transition: all var(--t-fast);
+}
+.expand-btn:hover { color: var(--gold-bright); }
+.expand-icon { display: inline-block; transition: transform 0.3s ease; }
+.expand-btn.open .expand-icon { transform: rotate(180deg); }
+
+/* Info Boxes */
+.info-box {
+  padding: 14px 18px; border-radius: var(--radius-sm);
+  margin: 10px 0; font-size: 0.85rem; border-left: 2px solid;
+}
+.info-box-success { background: var(--leaf-trace); border-color: var(--leaf); color: rgba(20,184,123,0.9); }
+.info-box-danger { background: var(--danger-dim); border-color: var(--danger); color: rgba(224,82,82,0.9); }
+.info-box-amber { background: var(--amber-dim); border-color: var(--amber); color: rgba(232,146,42,0.9); }
+.info-box-title {
+  font-family: var(--font-mono); font-size: 0.65rem;
+  font-weight: 500; letter-spacing: 0.1em;
+  text-transform: uppercase; margin-bottom: 8px; opacity: 0.8;
+}
+
+.detail-list { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+.detail-list li {
+  font-size: 0.855rem; padding-left: 18px;
+  position: relative; color: var(--text-2); line-height: 1.55;
+}
+.detail-list li::before { content: '→'; position: absolute; left: 0; color: var(--gold); font-size: 0.75rem; }
+
+/* Armada */
+.armada-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 12px; }
+.armada-card { padding: 20px; text-align: center; }
+.armada-type { font-family: var(--font-mono); font-size: 0.65rem; letter-spacing: 0.1em; color: var(--gold); text-transform: uppercase; margin-bottom: 8px; }
+.armada-capacity { font-family: var(--font-display); font-size: 1.35rem; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+.armada-price { font-size: 0.78rem; color: var(--text-3); margin-bottom: 8px; }
+.armada-usage { font-size: 0.72rem; color: var(--leaf); font-style: italic; }
+
+/* ============================================================
+   SPESIFIKASI TEKNIS — SECTION 4
+   ============================================================ */
+.spec-tabs { display: flex; gap: 8px; margin-bottom: 32px; flex-wrap: wrap; }
+.spec-tab {
+  font-family: var(--font-mono); font-size: 0.72rem;
+  padding: 8px 18px; border-radius: 30px;
+  border: 1px solid var(--glass-border);
+  background: var(--glass-bg); color: var(--text-3);
+  cursor: pointer; letter-spacing: 0.05em; transition: all var(--t-fast);
+}
+.spec-tab.active {
+  background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+  color: var(--midnight); border-color: var(--gold);
+  box-shadow: 0 4px 20px rgba(201,150,12,0.35);
+}
+.spec-tab:hover:not(.active) { border-color: rgba(201,150,12,0.3); color: var(--text); }
+.spec-panel { display: none; }
+.spec-panel.active { display: block; animation: fadeIn 0.4s ease; }
+
+/* Seg Table */
+.seg-table {
+  width: 100%; border-collapse: separate; border-spacing: 0;
+  border-radius: var(--radius); overflow: hidden; margin-bottom: 28px;
+}
+.seg-table thead tr { background: rgba(6,8,10,0.9); }
+.seg-table th {
+  padding: 14px 18px; font-family: var(--font-mono);
+  font-size: 0.68rem; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--gold); text-align: left;
+  font-weight: 500; border-bottom: 1px solid rgba(201,150,12,0.2);
+}
+.seg-table td {
+  padding: 13px 18px; font-size: 0.855rem; color: var(--text-2);
+  border-bottom: 1px solid var(--glass-border);
+  background: var(--glass-bg); transition: background 0.15s;
+}
+.seg-table tr:last-child td { border-bottom: none; }
+.seg-table tr:hover td { background: var(--glass-bg-hover); }
+.seg-table .mc-badge { font-family: var(--font-mono); font-size: 0.78rem; font-weight: 500; color: var(--leaf); }
+
+/* Accordion */
+.accordion-item {
+  border-radius: var(--radius-sm); overflow: hidden;
+  margin-bottom: 10px; border: 1px solid var(--glass-border);
+  background: var(--glass-bg); transition: all var(--t-fast);
+}
+.accordion-item:hover { border-color: rgba(201,150,12,0.2); }
+.accordion-header {
+  padding: 18px 24px;
+  display: flex; align-items: center; justify-content: space-between;
+  cursor: pointer; transition: background 0.2s; user-select: none;
+}
+.accordion-header:hover { background: var(--glass-bg-hover); }
+.accordion-title { font-family: var(--font-display); font-size: 0.98rem; font-weight: 600; color: var(--text); }
+.accordion-icon { font-size: 1.2rem; transition: transform 0.3s ease; color: var(--gold); }
+.accordion-item.open .accordion-icon { transform: rotate(45deg); }
+.accordion-body { max-height: 0; overflow: hidden; transition: max-height 0.55s var(--ease-out); }
+.accordion-item.open .accordion-body { max-height: 2000px; }
+.accordion-content { padding: 0 24px 24px; border-top: 1px solid var(--glass-border); padding-top: 18px; }
+
+/* MC Test */
+.mc-test { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 32px; }
+.mc-test-card { padding: 24px; text-align: center; }
+.mc-method { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 12px; color: var(--text-3); }
+.mc-name { font-family: var(--font-display); font-size: 0.98rem; font-weight: 700; color: var(--text); margin-bottom: 10px; }
+.mc-desc { font-size: 0.8rem; color: var(--text-2); line-height: 1.65; }
+
+/* ============================================================
+   LEGALITAS — SECTION 5
+   ============================================================ */
+.kbli-table {
+  width: 100%; border-collapse: separate; border-spacing: 0;
+  border-radius: var(--radius); overflow: hidden; margin-bottom: 28px;
+}
+.kbli-table thead tr { background: rgba(6,8,10,0.9); }
+.kbli-table th {
+  padding: 14px 18px; font-family: var(--font-mono);
+  font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--leaf); text-align: left; font-weight: 500;
+  border-bottom: 1px solid rgba(20,184,123,0.2);
+}
+.kbli-table td {
+  padding: 15px 18px; font-size: 0.855rem; color: var(--text-2);
+  border-bottom: 1px solid var(--glass-border); background: var(--glass-bg);
+  vertical-align: top; line-height: 1.6; transition: background 0.15s;
+}
+.kbli-table tr:last-child td { border-bottom: none; }
+.kbli-table tr:hover td { background: var(--glass-bg-hover); }
+.kbli-code { font-family: var(--font-mono); font-size: 0.95rem; font-weight: 600; color: var(--gold-bright); }
+.kbli-rec { display: inline-flex; align-items: center; gap: 4px; font-size: 0.72rem; color: var(--leaf); font-style: italic; }
+
+.legal-docs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 28px; }
+.legal-doc-card { padding: 26px; }
+.legal-doc-icon { font-size: 2rem; margin-bottom: 14px; display: block; }
+.legal-doc-title { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+.legal-doc-sub { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.08em; color: var(--gold); text-transform: uppercase; margin-bottom: 12px; }
+.legal-doc-desc { font-size: 0.81rem; color: var(--text-2); line-height: 1.6; }
+
+/* ============================================================
+   LOGISTIK — SECTION 6
+   ============================================================ */
+.logistik-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 28px; margin-top: 56px; }
+.penyusutan-card { padding: 36px; }
+.penyusutan-title { font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: var(--text); margin-bottom: 20px; }
+.penyusutan-causes { display: flex; flex-direction: column; gap: 16px; }
+.cause-item {
+  display: flex; gap: 16px; align-items: flex-start;
+  padding: 16px; background: rgba(255,255,255,0.025);
+  border-radius: var(--radius-sm); border-left: 2px solid var(--gold);
+}
+.cause-num { font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; color: var(--gold); opacity: 0.4; line-height: 1; min-width: 32px; }
+.cause-title { font-family: var(--font-body); font-size: 0.88rem; font-weight: 600; color: var(--text); margin-bottom: 4px; }
+.cause-desc { font-size: 0.8rem; color: var(--text-2); line-height: 1.55; }
+
+.formula-card {
+  padding: 28px;
+  background: rgba(6,8,10,0.8);
+  border-radius: var(--radius);
+  border: 1px solid rgba(201,150,12,0.2);
+  box-shadow: 0 0 40px rgba(201,150,12,0.05);
+}
+.formula-label { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
+.formula-body { font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-2); line-height: 2.2; }
+.formula-highlight { font-family: var(--font-display); font-size: 0.9rem; font-weight: 700; color: var(--gold-bright); }
+.mitigation-list { margin-top: 20px; display: flex; flex-direction: column; gap: 8px; }
+.mitigation-item { display: flex; gap: 10px; font-size: 0.8rem; color: var(--text-2); line-height: 1.55; }
+.mitigation-item::before { content: '✓'; color: var(--gold); flex-shrink: 0; margin-top: 1px; }
+
+/* ============================================================
+   HARGA PASAR — SECTION 7
+   ============================================================ */
+.price-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; margin-top: 56px; }
+.price-card { padding: 28px; }
+.price-category { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 10px; }
+.price-product { font-family: var(--font-display); font-size: 1.02rem; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+.price-satuan { font-size: 0.75rem; color: var(--text-3); margin-bottom: 18px; }
+.price-range { font-family: var(--font-display); font-size: 1.6rem; font-weight: 800; color: var(--gold-bright); letter-spacing: -0.02em; }
+.price-unit { font-size: 0.77rem; color: var(--text-3); font-family: var(--font-mono); display: block; margin-top: 4px; }
+.price-bar { height: 3px; background: var(--surface-2); border-radius: 2px; margin-top: 18px; overflow: hidden; }
+.price-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--gold), var(--gold-bright));
+  border-radius: 2px;
+  transition: width 1.2s var(--ease-out); width: 0;
+  box-shadow: 0 0 8px var(--gold-glow);
+}
+
+/* ============================================================
+   KLASTER PASAR — SECTION 8
+   ============================================================ */
+.klaster-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+.klaster-card { padding: 26px; }
+.klaster-region { font-family: var(--font-mono); font-size: 0.62rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+.klaster-name { font-family: var(--font-display); font-size: 1.02rem; font-weight: 700; color: var(--text); margin-bottom: 10px; }
+.klaster-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 12px; }
+.klaster-tag { font-family: var(--font-mono); font-size: 0.6rem; padding: 2px 10px; border-radius: 20px; background: rgba(201,150,12,0.08); color: var(--gold); border: 1px solid rgba(201,150,12,0.18); }
+.klaster-desc { font-size: 0.83rem; color: var(--text-2); line-height: 1.65; }
+
+.strategi-timeline { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 56px; }
+.strategi-step { padding: 28px; text-align: center; }
+.strategi-phase { font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 12px; }
+.strategi-phase-1 { color: var(--leaf); }
+.strategi-phase-2 { color: var(--amber); }
+.strategi-phase-3 { color: var(--gold); }
+.strategi-target { font-family: var(--font-display); font-size: 0.98rem; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+.strategi-desc { font-size: 0.8rem; color: var(--text-2); line-height: 1.6; }
+
+/* ============================================================
+   DO'S & DON'TS — SECTION 9
+   ============================================================ */
+.dos-donts-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 56px; }
+.dos-column, .donts-column { display: flex; flex-direction: column; gap: 12px; }
+
+.column-header {
+  display: flex; align-items: center; gap: 12px;
+  padding: 20px 24px; border-radius: var(--radius); margin-bottom: 8px;
+}
+.column-header-dos { background: linear-gradient(135deg, rgba(20,184,123,0.2) 0%, rgba(20,184,123,0.05) 100%); border: 1px solid rgba(20,184,123,0.2); }
+.column-header-donts { background: linear-gradient(135deg, rgba(224,82,82,0.2) 0%, rgba(224,82,82,0.05) 100%); border: 1px solid rgba(224,82,82,0.2); }
+.column-header-icon { font-size: 1.8rem; }
+.column-header-text { font-family: var(--font-display); font-size: 1.5rem; font-weight: 800; color: var(--text); }
+
+.dos-item, .donts-item {
+  padding: 16px 20px; border-radius: var(--radius-sm);
+  display: flex; gap: 14px; align-items: flex-start;
+  transition: all var(--t); cursor: default;
+}
+.dos-item { background: var(--leaf-trace); border: 1px solid rgba(20,184,123,0.12); }
+.dos-item:hover { background: rgba(20,184,123,0.1); transform: translateX(5px); box-shadow: -2px 0 0 var(--leaf); }
+.donts-item { background: var(--danger-dim); border: 1px solid rgba(224,82,82,0.1); }
+.donts-item:hover { background: rgba(224,82,82,0.15); transform: translateX(-5px); box-shadow: 2px 0 0 var(--danger); }
+.item-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 1px; }
+.item-text { font-size: 0.855rem; line-height: 1.6; color: var(--text-2); }
+.item-category { font-family: var(--font-mono); font-size: 0.58rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-3); margin-bottom: 4px; }
+
+/* ============================================================
+   CHECKLIST — SECTION 10
+   ============================================================ */
+.checklist-master { margin-top: 56px; display: flex; flex-direction: column; gap: 20px; }
+.checklist-group { padding: 32px 34px; }
+.checklist-group-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.checklist-group-title { display: flex; align-items: center; gap: 14px; }
+.checklist-group-letter {
+  width: 42px; height: 42px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display); font-size: 1.15rem; font-weight: 800;
+  color: var(--midnight);
+  box-shadow: 0 4px 16px rgba(201,150,12,0.4);
+}
+.checklist-group-name { font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; color: var(--text); }
+.progress-pill { display: flex; align-items: center; gap: 10px; font-family: var(--font-mono); font-size: 0.68rem; color: var(--text-3); }
+.progress-bar-wrap { width: 80px; height: 5px; background: var(--surface-2); border-radius: 3px; overflow: hidden; }
+.progress-bar-fill {
+  height: 100%; background: linear-gradient(90deg, var(--leaf), var(--gold));
+  border-radius: 3px; width: 0%;
+  transition: width 0.55s var(--ease-out);
+  box-shadow: 0 0 6px rgba(20,184,123,0.4);
+}
+
+.search-wrap { position: relative; margin-bottom: 32px; }
+.search-input {
+  width: 100%; padding: 14px 20px 14px 48px;
+  font-family: var(--font-body); font-size: 0.9rem; color: var(--text);
+  background: var(--glass-bg); backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  border-radius: 50px; outline: none;
+  transition: all var(--t-fast);
+}
+.search-input:focus {
+  background: var(--glass-bg-hover);
+  border-color: rgba(201,150,12,0.4);
+  box-shadow: 0 0 0 3px rgba(201,150,12,0.08);
+}
+.search-input::placeholder { color: var(--text-3); }
+.search-icon { position: absolute; left: 18px; top: 50%; transform: translateY(-50%); font-size: 1rem; color: var(--text-3); pointer-events: none; }
+
+.master-progress { display: flex; flex-direction: column; gap: 12px; padding: 28px 32px; margin-bottom: 28px; }
+.master-progress-title { font-family: var(--font-mono); font-size: 0.68rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); }
+.master-progress-bar-wrap { height: 7px; background: var(--surface-2); border-radius: 4px; overflow: hidden; }
+.master-progress-fill {
+  height: 100%; background: linear-gradient(90deg, var(--leaf), var(--gold), var(--gold-bright));
+  border-radius: 4px; width: 0%; transition: width 0.6s var(--ease-out);
+  box-shadow: 0 0 10px rgba(201,150,12,0.4);
+}
+.master-progress-stats { display: flex; justify-content: space-between; align-items: center; }
+.master-progress-count { font-family: var(--font-display); font-size: 2rem; font-weight: 800; color: var(--gold-bright); }
+.master-progress-label { font-size: 0.8rem; color: var(--text-3); }
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+footer {
+  background: rgba(4,6,8,0.95);
+  color: var(--text-2); padding: 80px 32px 48px;
+  position: relative; overflow: hidden;
+  border-top: 1px solid var(--glass-border);
+}
+footer::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse 80% 60% at 10% 0%, rgba(201,150,12,0.04) 0%, transparent 55%);
+}
+.footer-inner { max-width: 1200px; margin: 0 auto; position: relative; }
+.footer-brand {
+  font-family: var(--font-display); font-size: 1.9rem; font-weight: 800;
+  color: var(--text); margin-bottom: 6px; letter-spacing: -0.03em;
+}
+.footer-brand-sub { font-family: var(--font-mono); font-size: 0.68rem; color: var(--gold); margin-bottom: 6px; letter-spacing: 0.1em; text-transform: uppercase; }
+.footer-tagline { font-family: var(--font-body); font-style: italic; font-size: 0.93rem; color: var(--text-3); margin-bottom: 32px; max-width: 580px; line-height: 1.85; }
+.footer-divider { height: 1px; background: linear-gradient(90deg, rgba(201,150,12,0.2), rgba(20,184,123,0.15), transparent); margin: 32px 0; }
+.footer-bottom { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px; }
+.footer-copy { font-family: var(--font-mono); font-size: 0.67rem; letter-spacing: 0.04em; color: var(--text-3); line-height: 1.8; }
+.footer-copy strong { color: var(--gold); }
+.footer-ip {
+  font-family: var(--font-mono); font-size: 0.65rem; color: var(--text-3);
+  margin-top: 10px; padding: 10px 16px; border-radius: 8px;
+  border: 1px solid var(--glass-border); background: var(--glass-bg);
+  line-height: 1.8;
+}
+.footer-ip strong { color: var(--gold-bright); }
+.footer-version { font-family: var(--font-mono); font-size: 0.66rem; color: rgba(201,150,12,0.45); letter-spacing: 0.1em; margin-top: 4px; }
+
+/* ============================================================
+   TOOLTIP
+   ============================================================ */
+[data-tooltip] { position: relative; border-bottom: 1px dashed var(--gold); cursor: help; }
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute; bottom: calc(100% + 8px); left: 50%;
+  transform: translateX(-50%) scale(0.9);
+  white-space: nowrap; max-width: 260px; white-space: normal;
+  font-family: var(--font-body); font-size: 0.73rem; line-height: 1.5;
+  color: var(--text); background: rgba(7,10,13,0.97);
+  backdrop-filter: blur(10px);
+  padding: 8px 14px; border-radius: 8px;
+  border: 1px solid var(--glass-border);
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s; z-index: 500;
+}
+[data-tooltip]:hover::after { opacity: 1; transform: translateX(-50%) scale(1); }
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(32px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+/* Click flash on interactive elements */
+.click-flash { animation: clickFlash 0.3s ease; }
+@keyframes clickFlash {
+  0% { filter: brightness(1); }
+  30% { filter: brightness(1.4); }
+  100% { filter: brightness(1); }
+}
+
+/* ============================================================
+   PRINT
+   ============================================================ */
+@media print {
+  #main-nav, #progress-tracker, .hero-scroll-hint, .hero-ring, body::before, body::after, #page-overlay { display: none !important; }
+  body { background: white; color: #111; }
+  .section { opacity: 1 !important; transform: none !important; padding: 40px 0; }
+  .glass-card { box-shadow: none; border: 1px solid #ddd; background: white; }
+  .accordion-body { max-height: none !important; }
+  .timeline-detail { max-height: none !important; }
+  #hero { min-height: auto; }
+  .hero-bg { display: none; }
+  .hero-content { padding: 40px 0; }
+  .hero-title { color: #111 !important; -webkit-text-fill-color: #111 !important; }
+  footer { background: #ffffff !important; -webkit-print-color-adjust: exact; }
+  @page { margin: 20mm; }
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 900px) {
+  .hero-metrics { grid-template-columns: repeat(2, 1fr); }
+  .fondasi-grid { grid-template-columns: 1fr 1fr; }
+  .dos-donts-grid { grid-template-columns: 1fr; }
+  .logistik-grid { grid-template-columns: 1fr; }
+  .price-grid { grid-template-columns: 1fr; }
+  .klaster-grid { grid-template-columns: 1fr; }
+  .strategi-timeline { grid-template-columns: 1fr; }
+  .mc-test { grid-template-columns: 1fr; }
+  .legal-docs-grid { grid-template-columns: 1fr 1fr; }
+  .armada-grid { grid-template-columns: 1fr; }
+  #progress-tracker { display: none; }
+  .nav-links { display: none; }
+  .section { padding: 80px 20px; }
+}
+@media (max-width: 600px) {
+  .hero-metrics { grid-template-columns: 1fr 1fr; }
+  .fondasi-grid { grid-template-columns: 1fr; }
+  .legal-docs-grid { grid-template-columns: 1fr; }
+  .spec-tabs { flex-direction: column; }
+  .prinsip-card { padding: 28px 24px; }
+  .nav-inner { padding: 0 16px; }
+  .footer-bottom { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+
+<!-- PAGE TRANSITION OVERLAY -->
+<div id="page-overlay">
+  <div class="overlay-logo">Sentra Timber Nusantara Lestari</div>
+</div>
+
+<!-- NAVIGATION -->
+<nav id="main-nav">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-brand">
+      <span class="nav-brand-main">Sentra Timber Nusantara Lestari</span>
+      <span class="nav-brand-sub">lestari by Ibnuhyn</span>
+    </a>
+    <div class="nav-links">
+      <a href="#hero" class="nav-link active">Beranda</a>
+      <a href="#fondasi" class="nav-link">Fondasi</a>
+      <a href="#alur" class="nav-link">Alur Transaksi</a>
+      <a href="#spesifikasi" class="nav-link">Spesifikasi</a>
+      <a href="#legalitas" class="nav-link">Legalitas</a>
+      <a href="#logistik" class="nav-link">Logistik</a>
+      <a href="#harga" class="nav-link">Harga Pasar</a>
+      <a href="#klaster" class="nav-link">Klaster Pasar</a>
+      <a href="#dos-donts" class="nav-link">Do's & Don'ts</a>
+      <a href="#checklist" class="nav-link">Checklist</a>
+    </div>
+    <button class="nav-print-btn" onclick="window.print()">⌘ CETAK</button>
+  </div>
+</nav>
+
+<!-- PROGRESS TRACKER -->
+<div id="progress-tracker">
+  <div class="tracker-dot" data-section="hero" data-label="Beranda"></div>
+  <div class="tracker-dot" data-section="fondasi" data-label="Fondasi Awal"></div>
+  <div class="tracker-dot" data-section="alur" data-label="Alur Transaksi"></div>
+  <div class="tracker-dot" data-section="spesifikasi" data-label="Spesifikasi Teknis"></div>
+  <div class="tracker-dot" data-section="legalitas" data-label="Legalitas & Regulasi"></div>
+  <div class="tracker-dot" data-section="logistik" data-label="Logistik & Biaya"></div>
+  <div class="tracker-dot" data-section="harga" data-label="Harga Pasar"></div>
+  <div class="tracker-dot" data-section="klaster" data-label="Klaster Pasar"></div>
+  <div class="tracker-dot" data-section="dos-donts" data-label="Do's & Don'ts"></div>
+  <div class="tracker-dot" data-section="checklist" data-label="Checklist"></div>
+</div>
+
+<!-- ==================== HERO ==================== -->
+<section id="hero">
+  <div class="hero-bg">
+    <div class="hero-orb hero-orb-1"></div>
+    <div class="hero-orb hero-orb-2"></div>
+    <div class="hero-orb hero-orb-3"></div>
+  </div>
+  <div class="hero-ring"></div>
+  <div class="hero-ring hero-ring-2"></div>
+  <div style="position:relative;z-index:2;width:100%;display:flex;flex-direction:column;align-items:center;padding-top:var(--nav-h);">
+    <div class="hero-content">
+      <div class="hero-eyebrow">Panduan Distribusi Serbuk Kayu Profesional</div>
+      <h1 class="hero-title">
+        <span class="shimmer-text">Sentra Timber</span><br>Nusantara Lestari
+      </h1>
+      <div class="hero-by">lestari by Ibnuhyn</div>
+      <p class="hero-tagline">"Sistem Dulu, Baru Skala Besar."</p>
+      <p class="hero-desc">
+        Panduan ini dirancang untuk membantu Anda menjalankan bisnis distribusi serbuk kayu 
+        secara aman, rapi, dan minim risiko — dari transaksi pertama hingga membangun 
+        sistem yang dapat di-<em>scale</em>.
+      </p>
+      <div class="hero-ctas">
+        <a href="#fondasi" class="btn-primary ripple-wrap"><span>📖 Mulai Baca</span></a>
+        <a href="#checklist" class="btn-secondary">☑ Lihat Checklist</a>
+      </div>
+    </div>
+    <div class="hero-metrics">
+      <div class="metric-card tilt-card">
+        <div class="metric-icon">🌲</div>
+        <div class="metric-value">Tangerang + Banten</div>
+        <div class="metric-label">Potensi Pasar Utama</div>
+      </div>
+      <div class="metric-card tilt-card">
+        <div class="metric-icon">💰</div>
+        <div class="metric-value">Rp 400K–600K/m³</div>
+        <div class="metric-label">Harga Curah Pasar</div>
+      </div>
+      <div class="metric-card tilt-card">
+        <div class="metric-icon">📦</div>
+        <div class="metric-value">10–15% Kontrak</div>
+        <div class="metric-label">Margin Logistik</div>
+      </div>
+      <div class="metric-card tilt-card">
+        <div class="metric-icon">⚠️</div>
+        <div class="metric-value">5–10% Berat</div>
+        <div class="metric-label">Penyusutan Diperhitungkan</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <div class="scroll-mouse"></div>
+    <span class="scroll-text">Gulir ke bawah</span>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ==================== SECTION 2: FONDASI AWAL ==================== -->
+<section id="fondasi" class="section">
+  <div class="section-label">02 — Persiapan</div>
+  <h2 class="section-title">Fondasi Awal</h2>
+  <p class="section-subtitle">Persiapan yang benar sebelum transaksi pertama dimulai.</p>
+
+  <div class="fondasi-grid">
+    <div class="glass-card fondasi-card tilt-card">
+      <span class="fondasi-icon">🗂️</span>
+      <div class="fondasi-title">Administrasi & Sistem</div>
+      <ul class="checklist" id="cl-admin">
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Siapkan rekening bank aktif khusus bisnis</span></li>
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Pisahkan nomor WhatsApp bisnis dari nomor pribadi</span></li>
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Gunakan WhatsApp yang rapi, profesional, dan responsif</span></li>
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Buat sistem pencatatan transaksi (minimal Excel/Google Sheets)</span></li>
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Siapkan template invoice sederhana namun profesional</span></li>
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Miliki folder/arsip digital untuk semua bukti transaksi</span></li>
+      </ul>
+    </div>
+    <div class="glass-card fondasi-card tilt-card">
+      <span class="fondasi-icon">🤝</span>
+      <div class="fondasi-title">Jaringan & Kontak</div>
+      <ul class="checklist">
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Pegang kontak minimal 1 supplier utama yang <em>verified</em></span></li>
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Pegang kontak minimal 1 supplier cadangan</span></li>
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Pegang kontak 2–3 ekspedisi/jasa pengiriman berbeda</span></li>
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Pahami lokasi geografis supplier dan buyer (jarak, jalur, waktu tempuh)</span></li>
+      </ul>
+    </div>
+    <div class="glass-card fondasi-card tilt-card">
+      <span class="fondasi-icon">🌿</span>
+      <div class="fondasi-title">Pemahaman Produk</div>
+      <ul class="checklist">
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Pahami jenis-jenis serbuk kayu dan spesifikasinya</span></li>
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Pahami perbedaan kadar air untuk tiap segmen pasar</span></li>
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Pelajari cara uji kadar air secara mandiri (digital & sensorik)</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="prinsip-card">
+    <div class="prinsip-header">💡 5 Prinsip Emas Distribusi Serbuk Kayu</div>
+    <ol class="prinsip-list">
+      <li class="prinsip-item"><span class="prinsip-num">1</span><span class="prinsip-text">Buyer adalah prioritas pertama — supplier menyusul setelah buyer jelas</span></li>
+      <li class="prinsip-item"><span class="prinsip-num">2</span><span class="prinsip-text">Jangan beli barang sebelum ada kepastian order</span></li>
+      <li class="prinsip-item"><span class="prinsip-num">3</span><span class="prinsip-text">Jangan tanggung semua risiko sendiri — gunakan sistem DP</span></li>
+      <li class="prinsip-item"><span class="prinsip-num">4</span><span class="prinsip-text">Mulai dari batch kecil, bangun sistem, baru <em>scale</em></span></li>
+      <li class="prinsip-item"><span class="prinsip-num">5</span><span class="prinsip-text">Fokus pada <em>repeat order</em> — bukan transaksi besar sekali jalan</span></li>
+    </ol>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ==================== SECTION 3: ALUR TRANSAKSI ==================== -->
+<section id="alur" class="section">
+  <div class="section-label">03 — Proses</div>
+  <h2 class="section-title">Alur Transaksi</h2>
+  <p class="section-subtitle">Urutan langkah yang benar — jangan pernah tertukar.</p>
+
+  <div class="timeline">
+    <!-- Tahap 1 -->
+    <div class="timeline-item">
+      <div class="timeline-dot"><div class="timeline-circle">1</div></div>
+      <div class="glass-card timeline-body">
+        <div class="timeline-step-label">Tahap Pertama</div>
+        <div class="timeline-title">Lock Buyer — Prioritas Pertama</div>
+        <div class="timeline-summary">Pastikan buyer jelas sebelum melakukan komitmen apapun ke supplier.</div>
+        <button class="expand-btn ripple-wrap" onclick="toggleTimeline(this)"><span>Lihat Detail</span><span class="expand-icon">▾</span></button>
+        <div class="timeline-detail">
+          <div class="timeline-detail-inner">
+            <div class="info-box info-box-success">
+              <div class="info-box-title">✅ Yang Harus Dikonfirmasi ke Buyer</div>
+              <ul class="detail-list">
+                <li>Harga barang (<em>fixed price</em> — jangan biarkan ambigu)</li>
+                <li>Volume awal pengiriman (berapa ton/m³ untuk batch pertama)</li>
+                <li>Alamat lengkap penerima (detail: jalan, RT/RW, kelurahan, kota)</li>
+                <li>Nomor penerima aktif (yang bisa dihubungi saat barang datang)</li>
+                <li>Jam bongkar barang (apakah ada batasan waktu masuk?)</li>
+                <li>Sistem pembayaran (transfer bank / tunai / bertahap)</li>
+                <li>Besaran DP yang disepakati (berapa persen dari total nilai)</li>
+                <li>Siapa yang menanggung ongkos kirim (buyer / seller / dibagi)</li>
+                <li>Jadwal kebutuhan barang (kapan harus tiba?)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Tahap 2 -->
+    <div class="timeline-item">
+      <div class="timeline-dot"><div class="timeline-circle">2</div></div>
+      <div class="glass-card timeline-body">
+        <div class="timeline-step-label">Tahap Kedua</div>
+        <div class="timeline-title">DP Masuk dari Buyer</div>
+        <div class="timeline-summary">Jangan lakukan APAPUN ke supplier sebelum DP benar-benar masuk ke rekening Anda.</div>
+        <button class="expand-btn ripple-wrap" onclick="toggleTimeline(this)"><span>Lihat Detail</span><span class="expand-icon">▾</span></button>
+        <div class="timeline-detail">
+          <div class="timeline-detail-inner">
+            <div class="info-box info-box-danger">
+              <div class="info-box-title">⛔ Aturan Mutlak DP</div>
+              <ul class="detail-list">
+                <li>DP minimal 30–50% dari total nilai transaksi</li>
+                <li>Konfirmasi mutasi rekening — jangan percaya hanya dari screenshot</li>
+                <li>Tunggu clearing jika transfer antar bank berbeda</li>
+                <li>Kirim invoice DP segera setelah pembayaran masuk</li>
+              </ul>
+            </div>
+            <div class="info-box info-box-amber" style="margin-top:10px;">
+              <div class="info-box-title">💡 Negotiation Tip</div>
+              Untuk buyer baru: minta DP 50%. Untuk buyer lama dengan track record baik: DP 30–40% dapat dipertimbangkan. Jangan pernah 0% DP untuk transaksi baru.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Tahap 3 -->
+    <div class="timeline-item">
+      <div class="timeline-dot"><div class="timeline-circle">3</div></div>
+      <div class="glass-card timeline-body">
+        <div class="timeline-step-label">Tahap Ketiga</div>
+        <div class="timeline-title">Koordinasi Supplier</div>
+        <div class="timeline-summary">Setelah DP masuk, baru hubungi supplier dan konfirmasi ketersediaan stok.</div>
+        <button class="expand-btn ripple-wrap" onclick="toggleTimeline(this)"><span>Lihat Detail</span><span class="expand-icon">▾</span></button>
+        <div class="timeline-detail">
+          <div class="timeline-detail-inner">
+            <ul class="detail-list">
+              <li>Konfirmasi ready stock dan volume yang tersedia</li>
+              <li>Verifikasi kualitas: kadar air, jenis kayu, kondisi fisik</li>
+              <li>Negosiasi harga dan syarat pembayaran ke supplier</li>
+              <li>Tentukan jadwal loading dan pengiriman</li>
+              <li>Minta supplier siapkan Nota Perusahaan yang lengkap</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Tahap 4 -->
+    <div class="timeline-item">
+      <div class="timeline-dot"><div class="timeline-circle">4</div></div>
+      <div class="glass-card timeline-body">
+        <div class="timeline-step-label">Tahap Keempat</div>
+        <div class="timeline-title">Koordinasi Ekspedisi & Pengiriman</div>
+        <div class="timeline-summary">Pilih armada yang tepat — efisiensi bongkar muat adalah kunci margin.</div>
+        <button class="expand-btn ripple-wrap" onclick="toggleTimeline(this)"><span>Lihat Detail</span><span class="expand-icon">▾</span></button>
+        <div class="timeline-detail">
+          <div class="timeline-detail-inner">
+            <div class="armada-grid">
+              <div class="glass-card armada-card">
+                <div class="armada-type">Pick-Up</div>
+                <div class="armada-capacity">1–2 Ton</div>
+                <div class="armada-price">Rp 300–500K/trip</div>
+                <div class="armada-usage">Batch perdana, uji coba pasar</div>
+              </div>
+              <div class="glass-card armada-card">
+                <div class="armada-type">Engkel</div>
+                <div class="armada-capacity">3–5 Ton</div>
+                <div class="armada-price">Rp 500K–1,2Jt/trip</div>
+                <div class="armada-usage">Pelanggan reguler, mid-volume</div>
+              </div>
+              <div class="glass-card armada-card">
+                <div class="armada-type">Fuso/Tronton</div>
+                <div class="armada-capacity">8–20 Ton</div>
+                <div class="armada-price">Rp 1,5–3Jt/trip</div>
+                <div class="armada-usage">Industri besar, volume masif</div>
+              </div>
+            </div>
+            <div class="info-box info-box-amber" style="margin-top:12px;">
+              <div class="info-box-title">⚡ Efisiensi Bongkar Muat</div>
+              Dump truck: 0,08 detik/kg (5× lebih cepat dari manual). Prioritaskan dump truck untuk buyer industri yang menghitung biaya waktu bongkar.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Tahap 5 -->
+    <div class="timeline-item">
+      <div class="timeline-dot"><div class="timeline-circle">5</div></div>
+      <div class="glass-card timeline-body">
+        <div class="timeline-step-label">Tahap Kelima</div>
+        <div class="timeline-title">Loading & Dokumentasi</div>
+        <div class="timeline-summary">Dokumentasi adalah perlindungan hukum Anda — jangan skip.</div>
+        <button class="expand-btn ripple-wrap" onclick="toggleTimeline(this)"><span>Lihat Detail</span><span class="expand-icon">▾</span></button>
+        <div class="timeline-detail">
+          <div class="timeline-detail-inner">
+            <ul class="detail-list">
+              <li>Foto barang sebelum loading (kondisi awal)</li>
+              <li>Foto saat proses loading berlangsung</li>
+              <li>Foto timbangan/volume akhir</li>
+              <li>Pastikan Nota Perusahaan ada di dalam kendaraan</li>
+              <li>Catat nomor plat kendaraan dan kontak driver</li>
+              <li>Kirim update ke buyer: barang sudah jalan + estimasi tiba</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Tahap 6 -->
+    <div class="timeline-item">
+      <div class="timeline-dot"><div class="timeline-circle">6</div></div>
+      <div class="glass-card timeline-body">
+        <div class="timeline-step-label">Tahap Keenam</div>
+        <div class="timeline-title">Setelah Barang Sampai & Pelunasan</div>
+        <div class="timeline-summary">Konfirmasi penerimaan, tangani komplain (jika ada), dan tagih pelunasan.</div>
+        <button class="expand-btn ripple-wrap" onclick="toggleTimeline(this)"><span>Lihat Detail</span><span class="expand-icon">▾</span></button>
+        <div class="timeline-detail">
+          <div class="timeline-detail-inner">
+            <ul class="detail-list">
+              <li>Hubungi buyer — konfirmasi barang sudah diterima dengan baik</li>
+              <li>Catat dan tindaklanjuti komplain (jika ada) dengan cepat</li>
+              <li>Kirim invoice pelunasan segera setelah konfirmasi penerimaan</li>
+              <li>Tagih pelunasan sesuai kesepakatan</li>
+              <li>Arsipkan semua dokumen transaksi</li>
+              <li>Evaluasi proses: catat hal yang perlu diperbaiki</li>
+              <li>Mulai bangun komunikasi untuk <em>repeat order</em></li>
+            </ul>
+            <div class="info-box info-box-success" style="margin-top:12px;">
+              <div class="info-box-title">🌱 Bangun Repeat Order</div>
+              Buyer loyal adalah aset bisnis terbesar. Follow up 1–2 minggu setelah pengiriman untuk menanyakan kebutuhan berikutnya.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ==================== SECTION 4: SPESIFIKASI TEKNIS ==================== -->
+<section id="spesifikasi" class="section">
+  <div class="section-label">04 — Teknis</div>
+  <h2 class="section-title">Spesifikasi Teknis</h2>
+  <p class="section-subtitle">Pahami produk yang Anda jual — ini yang membuat Anda dipercaya.</p>
+
+  <div class="spec-tabs" style="margin-top:48px;">
+    <button class="spec-tab active ripple-wrap" onclick="switchSpec(this,'segmen')">Segmentasi Pasar</button>
+    <button class="spec-tab ripple-wrap" onclick="switchSpec(this,'kadar')">Standar Kadar Air</button>
+    <button class="spec-tab ripple-wrap" onclick="switchSpec(this,'uji')">Cara Uji Kadar Air</button>
+  </div>
+
+  <!-- Panel: Segmentasi -->
+  <div class="spec-panel active" id="spec-segmen">
+    <table class="seg-table">
+      <thead>
+        <tr><th>Segmen</th><th>Kadar Air Target</th><th>Ukuran Partikel</th><th>Jenis Kayu</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>🍄 Media Tanam Jamur</td><td class="mc-badge">50–65%</td><td>Halus / Fine</td><td>Sengon, Albasia</td></tr>
+        <tr><td>🐄 Alas Kandang Hewan</td><td class="mc-badge">9,5–15%</td><td>Sedang</td><td>Pinus, Jati Belanda, Mahoni</td></tr>
+        <tr><td>🏭 Bahan Bakar IKM</td><td class="mc-badge">&lt; 20%</td><td>Kasar / Campuran</td><td>Campuran (keras + lunak)</td></tr>
+        <tr><td>🌿 Wood Pellet / Biomassa</td><td class="mc-badge">&lt; 15%</td><td>Halus / Uniform</td><td>Standar industri ekspor</td></tr>
+      </tbody>
+    </table>
+    <div class="info-box info-box-danger">
+      <div class="info-box-title">⛔ Peringatan Penting</div>
+      Jangan gunakan kayu bergetah atau berminyak (pinus, damar, karet) untuk media tanam jamur — senyawa terpenoid dan resin akan meracuni miselium jamur dan menghancurkan seluruh batch produksi buyer Anda.
+    </div>
+  </div>
+
+  <!-- Panel: Kadar Air -->
+  <div class="spec-panel" id="spec-kadar">
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <span class="accordion-title">🍄 Media Tanam Jamur — Standar Paling Ketat</span>
+        <span class="accordion-icon">+</span>
+      </div>
+      <div class="accordion-body">
+        <div class="accordion-content">
+          <p style="font-size:0.9rem;margin-bottom:12px;color:var(--text-2);">Kadar air target: <strong style="color:var(--gold-bright);">55–65%</strong> (untuk baglog jamur tiram/shiitake)</p>
+          <ul class="detail-list">
+            <li>Di bawah 50%: baglog terlalu kering — miselium lambat tumbuh, gagal koloni</li>
+            <li>Di atas 70%: terlalu basah — risiko kontaminasi bakteri dan jamur liar tinggi</li>
+            <li>Standar optimum: 60% ± 3% untuk hasil produksi maksimal</li>
+          </ul>
+          <div class="info-box info-box-success" style="margin-top:8px;">
+            <div class="info-box-title">✓ Kayu yang Dianjurkan</div>
+            Sengon (lunak, kadar getah rendah, mudah terurai oleh miselium)
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <span class="accordion-title">🐄 Alas Kandang Hewan — Kenyamanan & Kebersihan</span>
+        <span class="accordion-icon">+</span>
+      </div>
+      <div class="accordion-body">
+        <div class="accordion-content">
+          <p style="font-size:0.9rem;margin-bottom:12px;color:var(--text-2);">Kadar air: <strong style="color:var(--gold-bright);">9,5%–15%</strong> (kering namun tidak terlalu gersang)</p>
+          <ul class="detail-list">
+            <li>Pinus (aroma segar, absorpsi baik)</li>
+            <li>Jati Belanda (tekstur halus, tidak mudah berjamur)</li>
+            <li>Mahoni (densitas sedang, absorpsi tinggi)</li>
+          </ul>
+          <div class="info-box info-box-amber" style="margin-top:12px;">
+            <div class="info-box-title">Pasar yang Dapat Disasar</div>
+            <ul class="detail-list">
+              <li>Peternakan ayam broiler/layer</li>
+              <li>Kandang kelinci, hamster, guinea pig</li>
+              <li>Pet shop dan distributor perlengkapan hewan</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <div class="accordion-header" onclick="toggleAccordion(this)">
+        <span class="accordion-title">🏭 Bahan Bakar IKM — Volume Besar, Margin Tipis</span>
+        <span class="accordion-icon">+</span>
+      </div>
+      <div class="accordion-body">
+        <div class="accordion-content">
+          <p style="font-size:0.9rem;color:var(--text-2);margin-bottom:16px;">Segmen paling kompetitif dari sisi harga, namun volume permintaan paling besar dan frekuensi pembelian paling tinggi (harian).</p>
+          <ul class="detail-list">
+            <li>Standar minimal: kadar air &lt; 20%</li>
+            <li>Ukuran: heterogen/kasar (tidak perlu presisi mesh)</li>
+            <li>Jenis kayu: campuran keras dan lunak dapat diterima</li>
+          </ul>
+          <div class="info-box info-box-amber" style="margin-top:12px;">
+            <div class="info-box-title">Target Industri di Tangerang-Banten</div>
+            <ul class="detail-list">
+              <li>Pabrik tahu (ketel uap berbahan bakar serbuk kayu)</li>
+              <li>Pabrik kerupuk (proses penggorengan dan pengeringan)</li>
+              <li>IKM makanan tradisional lain yang masih pakai tungku kayu</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Panel: Uji Kadar Air -->
+  <div class="spec-panel" id="spec-uji">
+    <div class="mc-test">
+      <div class="glass-card mc-test-card tilt-card">
+        <div class="mc-method">Metode 1</div>
+        <div class="mc-name">🔬 Moisture Meter Digital</div>
+        <div class="mc-desc">
+          <strong>Alat rekomendasi:</strong> TK-100W atau MD-2G+<br>
+          <strong>Akurasi:</strong> ±0,5% | Rentang: 0%–60%<br><br>
+          Ambil sampel dari <strong>minimal 3 titik</strong> berbeda. Tancapkan probe ke material, catat angka, hitung rata-rata. Uji terutama di bagian bawah tumpukan (sering lebih lembap).
+        </div>
+      </div>
+      <div class="glass-card mc-test-card tilt-card">
+        <div class="mc-method">Metode 2</div>
+        <div class="mc-name">✋ Squeeze Test (Uji Genggam)</div>
+        <div class="mc-desc">
+          <strong>Kering (&lt;20%):</strong> Serbuk terurai jadi partikel lepas saat dilepas. Tidak ada bekas air di telapak.<br><br>
+          <strong>Ideal Jamur (55–60%):</strong> Membentuk gumpalan solid, tidak ada tetesan air keluar.<br><br>
+          <strong>Berlebih (&gt;65%):</strong> Tetesan air nyata keluar saat diremas.
+        </div>
+      </div>
+      <div class="glass-card mc-test-card tilt-card">
+        <div class="mc-method">Metode 3 — Formal</div>
+        <div class="mc-name">🏛️ Oven-Dry ASTM D4442</div>
+        <div class="mc-desc">
+          Digunakan untuk keperluan pengujian formal/legal.<br><br>
+          Sampel dikeringkan pada suhu <strong>103°C ± 2°C</strong> hingga berat konstan. Kadar air = persentase kehilangan berat terhadap berat kering oven.<br><br>
+          <em>Rujukan tertinggi yang dapat dipertanggungjawabkan secara hukum.</em>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ==================== SECTION 5: LEGALITAS ==================== -->
+<section id="legalitas" class="section">
+  <div class="section-label">05 — Regulasi</div>
+  <h2 class="section-title">Legalitas & Regulasi</h2>
+  <p class="section-subtitle">Legalitas bukan formalitas — ini perlindungan bisnis Anda.</p>
+
+  <h3 style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:var(--text);margin:48px 0 20px;">Pilihan Kode <span data-tooltip="KBLI: Klasifikasi Baku Lapangan Usaha Indonesia — kode yang menentukan jenis izin dan standar operasional perusahaan">KBLI</span> yang Tepat</h3>
+
+  <table class="kbli-table">
+    <thead>
+      <tr><th>Kode</th><th>Nama</th><th>Kapan Digunakan</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="kbli-code">4679</span></td>
+        <td>Perdagangan Besar Produk Lainnya Termasuk Limbah dan Skrap</td>
+        <td><span class="kbli-rec">✅ Rekomendasi Utama</span> — untuk distributor murni tanpa fasilitas pengolahan</td>
+      </tr>
+      <tr>
+        <td><span class="kbli-code">46696</span></td>
+        <td>Perdagangan Besar Barang Bekas dan Sisa-Sisa Tak Terpakai (Scrap)</td>
+        <td>Alternatif jika fokus pada pengumpulan material sisa</td>
+      </tr>
+      <tr>
+        <td><span class="kbli-code">16295</span></td>
+        <td>Industri Kayu Bakar dan Pelet dari Kayu</td>
+        <td><strong>Wajib</strong> jika melakukan <em>pressing</em>/pemadatan serbuk menjadi pelet atau briket</td>
+      </tr>
+      <tr>
+        <td><span class="kbli-code">16101</span></td>
+        <td>Industri Penggergajian Kayu</td>
+        <td>Kode untuk supplier (<em>sawmill</em>) — bukan distributor</td>
+      </tr>
+      <tr>
+        <td><span class="kbli-code">46636</span></td>
+        <td>Perdagangan Besar Bahan Konstruksi Dari Kayu</td>
+        <td>Relevan jika juga menjual papan gergajian/kayu olahan</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="info-box info-box-amber" style="margin-bottom:48px;">
+    <div class="info-box-title">💡 Rekomendasi</div>
+    Gunakan KBLI <strong>4679</strong>. Kode ini memberikan fleksibilitas mengelola berbagai jenis sisa industri kayu tanpa terbebani regulasi industri manufaktur yang lebih kompleks. Daftarkan melalui sistem <span data-tooltip="OSS: Online Single Submission — sistem pendaftaran perizinan berusaha terintegrasi milik pemerintah Indonesia">OSS</span> berbasis risiko.
+  </div>
+
+  <h3 style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:var(--text);margin-bottom:20px;">Dokumen Angkutan Hasil Hutan (Per Pengiriman)</h3>
+  <p style="font-size:0.83rem;color:var(--text-3);margin-bottom:24px;font-style:italic;">Dasar Hukum: UU No. 41 Tahun 1999 tentang Kehutanan — melarang pengangkutan hasil hutan tanpa dokumen sah.</p>
+
+  <div class="legal-docs-grid">
+    <div class="glass-card legal-doc-card">
+      <span class="legal-doc-icon">📜</span>
+      <div class="legal-doc-title"><span data-tooltip="SAKR: Surat Angkutan Kayu Rakyat — dokumen angkutan untuk kayu dari lahan milik masyarakat">SAKR</span></div>
+      <div class="legal-doc-sub">Surat Angkutan Kayu Rakyat</div>
+      <div class="legal-doc-desc">Digunakan untuk kayu budidaya dari hutan hak (lahan milik masyarakat). Penerbit: pemilik lahan secara mandiri setelah UU Cipta Kerja.</div>
+    </div>
+    <div class="glass-card legal-doc-card">
+      <span class="legal-doc-icon">🗺️</span>
+      <div class="legal-doc-title"><span data-tooltip="SKAU: Surat Keterangan Asal Usul — dokumen yang menerangkan asal-usul kayu dari hutan hak">SKAU</span></div>
+      <div class="legal-doc-sub">Surat Keterangan Asal Usul</div>
+      <div class="legal-doc-desc">Hasil hutan kayu dari hutan hak atau lahan masyarakat. Penerbit: pejabat desa setempat. Digunakan di wilayah yang belum tersentuh industri formal.</div>
+    </div>
+    <div class="glass-card legal-doc-card glass-card-gold" style="border-left:2px solid var(--gold);">
+      <span class="legal-doc-icon">🏢</span>
+      <div class="legal-doc-title">Nota Perusahaan</div>
+      <div class="legal-doc-sub">Paling Relevan untuk Distributor <span class="badge badge-wajib">WAJIB</span></div>
+      <div class="legal-doc-desc">Untuk produk limbah industri kayu (serpih, serbuk, arang). Penerbit: industri/pabrik pengirim (supplier Anda). Wajib mencantumkan nama pengirim, penerima, volume, jenis kayu, dan referensi nomor SKAU/SAKR.</div>
+    </div>
+  </div>
+
+  <div class="info-box info-box-danger" style="margin-top:24px;">
+    <div class="info-box-title">⚠️ Pastikan</div>
+    Setiap armada pengiriman wajib membawa Nota Perusahaan untuk menghindari hambatan pemeriksaan di jalur distribusi darat.
+  </div>
+
+  <h3 style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:var(--text);margin:48px 0 20px;">Membangun Kepercayaan Tanpa PT/CV</h3>
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;">
+    <div class="glass-card glass-card-leaf" style="padding:28px;">
+      <div style="font-family:var(--font-mono);font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--leaf);margin-bottom:14px;">✅ Yang Harus Dilakukan</div>
+      <ul class="detail-list">
+        <li>Gunakan nama usaha sederhana yang mudah diingat</li>
+        <li>Buat invoice yang rapi (ada logo, nomor invoice, detail lengkap)</li>
+        <li>Gunakan komunikasi profesional (bahasa formal, respons cepat)</li>
+        <li>Jangan mengaku perusahaan besar jika tidak</li>
+        <li>Jelaskan bahwa Anda "handle distribusi dan pengadaan"</li>
+        <li>Fokus pada ketepatan waktu dan kualitas</li>
+      </ul>
+    </div>
+    <div class="glass-card glass-card-danger" style="padding:28px;">
+      <div style="font-family:var(--font-mono);font-size:0.62rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--danger);margin-bottom:14px;">❌ Yang Harus Dihindari</div>
+      <ul class="detail-list">
+        <li>Berbohong soal legalitas usaha</li>
+        <li>Mengklaim memiliki gudang atau armada sendiri jika tidak ada</li>
+        <li>Menggunakan kata-kata ragu seperti "mungkin" atau "kayaknya"</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ==================== SECTION 6: LOGISTIK ==================== -->
+<section id="logistik" class="section">
+  <div class="section-label">06 — Operasional</div>
+  <h2 class="section-title">Logistik & Biaya Operasional</h2>
+  <p class="section-subtitle">Logistik yang tepat = margin yang selamat.</p>
+
+  <div class="logistik-grid">
+    <div>
+      <div class="penyusutan-card glass-card">
+        <div class="penyusutan-title">⚠️ Fenomena Penyusutan Berat — Wajib Diperhitungkan</div>
+        <p style="font-size:0.855rem;color:var(--text-2);margin-bottom:20px;">Penyusutan berat adalah kerugian tersembunyi yang sering diabaikan distributor pemula. Perhitungkan ini dalam struktur harga jual.</p>
+        <div class="penyusutan-causes">
+          <div class="cause-item">
+            <div class="cause-num">01</div>
+            <div>
+              <div class="cause-title">Evaporasi Selama Perjalanan</div>
+              <div class="cause-desc">Serbuk kayu kehilangan kadar air saat diangkut, terutama dengan truk terbuka. Estimasi penurunan: 2%–4% kadar air pada jarak ±40 km. Berat saat ditimbang di buyer lebih rendah dari saat muat.</div>
+            </div>
+          </div>
+          <div class="cause-item">
+            <div class="cause-num">02</div>
+            <div>
+              <div class="cause-title">Penyusutan Mekanis (Settling)</div>
+              <div class="cause-desc">Getaran selama perjalanan membuat partikel mengisi ruang kosong, menurunkan volume visual. Serbuk halus bisa terbang tertiup angin. Estimasi kerugian berat: ±9% dalam skenario distribusi tertentu.</div>
+            </div>
+          </div>
+          <div class="cause-item">
+            <div class="cause-num">03</div>
+            <div>
+              <div class="cause-title">Efisiensi Bongkar Muat</div>
+              <div class="cause-desc">Bongkar manual: 0,38 detik/kg (sangat lambat). Dump truck: 0,08 detik/kg (5× lebih cepat). Waktu bongkar = biaya terselubung yang mempengaruhi total margin.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:20px;">
+      <div class="formula-card">
+        <div class="formula-label">📌 Rumus Harga Aman</div>
+        <div class="formula-body">
+          <div>Harga Jual =</div>
+          <div style="margin-left:16px;">HPP</div>
+          <div style="margin-left:16px;">+ Ongkir</div>
+          <div style="margin-left:16px;">+ (HPP × <span class="formula-highlight">10% penyusutan</span>)</div>
+          <div style="margin-left:16px;">+ Margin Keuntungan</div>
+        </div>
+        <div class="mitigation-list">
+          <div class="mitigation-item">Gunakan terpal kedap angin saat pengiriman</div>
+          <div class="mitigation-item">Kemas dalam karung jumbo (<em>jumbo bag</em>) untuk minimalkan paparan udara</div>
+          <div class="mitigation-item">Jadwalkan pengiriman malam/dini hari (suhu lebih rendah = evaporasi lebih lambat)</div>
+          <div class="mitigation-item">Hitung 5–10% faktor penyusutan dalam harga jual</div>
+        </div>
+      </div>
+      <div class="glass-card" style="padding:24px;">
+        <div style="font-family:var(--font-mono);font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;">Biaya Rata-rata</div>
+        <div style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:var(--text);">Rp 107–300/ton-km</div>
+        <div style="font-size:0.76rem;color:var(--text-3);margin-top:4px;">Biaya operasi rata-rata (tergantung kondisi jalan)</div>
+        <div style="margin-top:18px;padding-top:18px;border-top:1px solid var(--glass-border);">
+          <div style="font-family:var(--font-display);font-size:1.2rem;font-weight:700;color:var(--leaf);">10–15%</div>
+          <div style="font-size:0.76rem;color:var(--text-3);margin-top:4px;">Margin profit pengiriman dari total nilai kontrak</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ==================== SECTION 7: HARGA PASAR ==================== -->
+<section id="harga" class="section">
+  <div class="section-label">07 — Pasar</div>
+  <h2 class="section-title">Harga Pasar 2024–2025</h2>
+  <p class="section-subtitle">Pahami harga pasar — jangan jual terlalu murah, jangan terlalu mahal.</p>
+
+  <div class="price-grid">
+    <div class="glass-card price-card tilt-card">
+      <div class="price-category">Serbuk Gergaji Halus</div>
+      <div class="price-product">Sengon — Media Jamur</div>
+      <div class="price-satuan">Per karung 10 kg</div>
+      <div class="price-range">Rp 25.000 – 60.000</div>
+      <span class="price-unit">/ karung (10 kg)</span>
+      <div class="price-bar"><div class="price-bar-fill" data-width="25"></div></div>
+    </div>
+    <div class="glass-card price-card tilt-card">
+      <div class="price-category">Serbuk Premium</div>
+      <div class="price-product">Jati Belanda / Pinus — Alas Hewan</div>
+      <div class="price-satuan">Per karung 10 kg</div>
+      <div class="price-range">Rp 57.000 – 138.000</div>
+      <span class="price-unit">/ karung (10 kg)</span>
+      <div class="price-bar"><div class="price-bar-fill" data-width="55"></div></div>
+    </div>
+    <div class="glass-card price-card tilt-card">
+      <div class="price-category">Serbuk Curah (Truckload)</div>
+      <div class="price-product">Campuran — Bahan Bakar IKM</div>
+      <div class="price-satuan">Per meter kubik (m³)</div>
+      <div class="price-range">Rp 400.000 – 600.000</div>
+      <span class="price-unit">/ m³ curah</span>
+      <div class="price-bar"><div class="price-bar-fill" data-width="40"></div></div>
+    </div>
+    <div class="glass-card price-card tilt-card">
+      <div class="price-category">Wood Pellet Standard</div>
+      <div class="price-product">Energi Industri / Ekspor</div>
+      <div class="price-satuan">Per ton</div>
+      <div class="price-range">Rp 1,8 Jt – 2,6 Jt</div>
+      <span class="price-unit">/ ton</span>
+      <div class="price-bar"><div class="price-bar-fill" data-width="85"></div></div>
+    </div>
+  </div>
+
+  <div class="glass-card glass-card-amber" style="padding:28px;margin-top:20px;">
+    <div style="font-family:var(--font-mono);font-size:0.62rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--amber);margin-bottom:12px;">💡 Tip Optimasi Margin</div>
+    <p style="font-size:0.9rem;color:var(--text-2);line-height:1.75;">
+      Harga beli dari sawmill: ~<strong style="color:var(--text);">Rp 414.818/m³</strong> (curah). Strategi: beli curah → kemas dalam karung → jual dengan margin kemasan. Pembelian curah dari sawmill + pengemasan mandiri dapat menghasilkan margin lebih tinggi dibandingkan jual curah kembali. Perhitungkan biaya tenaga kerja pengemasan dalam kalkulasi margin.
+    </p>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ==================== SECTION 8: KLASTER PASAR ==================== -->
+<section id="klaster" class="section">
+  <div class="section-label">08 — Wilayah</div>
+  <h2 class="section-title">Klaster Pasar Tangerang–Banten</h2>
+  <p class="section-subtitle">Peta peluang pasar — fokus di sini dulu.</p>
+
+  <h3 style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--text);margin:56px 0 20px;">🏭 Segmen Industri Pangan Tradisional (Bahan Bakar)</h3>
+  <div class="klaster-grid">
+    <div class="glass-card klaster-card tilt-card">
+      <div class="klaster-region">Neglasari & Karawaci</div>
+      <div class="klaster-name">Pabrik Tahu</div>
+      <div class="klaster-tags"><span class="klaster-tag">Beli Harian</span><span class="klaster-tag">Volume Kecil-Menengah</span><span class="klaster-tag">Prioritas Batch Pertama</span></div>
+      <div class="klaster-desc">IKM yang masih pakai tungku serbuk kayu untuk ketel uap. Frekuensi beli harian atau mingguan. Cocok untuk membangun track record dan repeat order. Contoh target: <em>Tahu Fajar Baru</em> — Neglasari, <em>Pabrik Tahu Putra Jaya</em> — Karawaci.</div>
+    </div>
+    <div class="glass-card klaster-card tilt-card">
+      <div class="klaster-region">Setu, Tangerang Selatan</div>
+      <div class="klaster-name">Pabrik Tahu Na Po Tet</div>
+      <div class="klaster-tags"><span class="klaster-tag">Berdiri Sejak 1965</span><span class="klaster-tag">Volume Besar</span></div>
+      <div class="klaster-desc">Pabrik tahu tertua di Tangerang, berlokasi di Bakti Jaya, Setu. Volume produksi besar menghasilkan kebutuhan bahan bakar yang signifikan. Strategi penetrasi: pendekatan langsung ke bagian pengadaan/pembelian.</div>
+    </div>
+    <div class="glass-card klaster-card tilt-card">
+      <div class="klaster-region">Cisoka & Solear</div>
+      <div class="klaster-name">Sentra Kerupuk</div>
+      <div class="klaster-tags"><span class="klaster-tag">Volume Masif</span><span class="klaster-tag">Frekuensi Tinggi</span></div>
+      <div class="klaster-desc">Klaster pabrik kerupuk (termasuk sentra kerupuk Cisoka). Konsumsi serbuk kayu masif untuk penggorengan & pengeringan. Target: Rumah Snack, Pabrik Kerupuk Cisoka, dan IKM kerupuk sejenis.</div>
+    </div>
+    <div class="glass-card klaster-card tilt-card">
+      <div class="klaster-region">Cipondoh, Tangerang</div>
+      <div class="klaster-name">IKM Makanan Tradisional</div>
+      <div class="klaster-tags"><span class="klaster-tag">Repeat Order</span><span class="klaster-tag">Pasar Lokal</span></div>
+      <div class="klaster-desc">Sentra IKM yang masih menggunakan tungku tradisional berbahan bakar kayu. Kebutuhan serbuk kayu harian dan mingguan. Pendekatan door-to-door efektif di segmen ini.</div>
+    </div>
+  </div>
+
+  <h3 style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--text);margin:56px 0 20px;">🌿 Segmen Industri Wood Pellet & Biomassa (Off-taker Skala Besar)</h3>
+  <div class="klaster-grid">
+    <div class="glass-card klaster-card tilt-card">
+      <div class="klaster-region">Balaraja</div>
+      <div class="klaster-name">PT Citra Berkah Mandiri</div>
+      <div class="klaster-tags"><span class="klaster-tag">Industri Pelet Kayu</span><span class="klaster-tag">Jangkar Pendapatan</span></div>
+      <div class="klaster-desc">Industri kayu dan penyediaan pelet kayu. Peluang sebagai mitra strategis atau buyer bahan baku mentah. Nilai strategis tinggi jika berhasil masuk sebagai pemasok tetap.</div>
+    </div>
+    <div class="glass-card klaster-card tilt-card">
+      <div class="klaster-region">Cisauk</div>
+      <div class="klaster-name">PT Lancar Inti Maju</div>
+      <div class="klaster-tags"><span class="klaster-tag">Arang Kayu</span><span class="klaster-tag">Briket Biomassa</span></div>
+      <div class="klaster-desc">Pengadaan komoditas biomassa (arang kayu, briket). Membutuhkan input serbuk berkualitas tinggi untuk proses produksi. Standar kualitas lebih ketat — butuh sistem yang matang.</div>
+    </div>
+    <div class="glass-card klaster-card tilt-card">
+      <div class="klaster-region">Legok, Tangerang</div>
+      <div class="klaster-name">Klaster Pelet Biomassa</div>
+      <div class="klaster-tags"><span class="klaster-tag">Ekspor Oriented</span><span class="klaster-tag">Volume Tinggi</span></div>
+      <div class="klaster-desc">Industri pengolahan biomassa yang berorientasi ekspor. Standar kualitas internasional (ISO 17225). Butuh konsistensi kadar air dan ukuran partikel yang sangat ketat.</div>
+    </div>
+    <div class="glass-card klaster-card tilt-card">
+      <div class="klaster-region">Tangerang Raya</div>
+      <div class="klaster-name">Media Tanam Jamur</div>
+      <div class="klaster-tags"><span class="klaster-tag">Margin Tinggi</span><span class="klaster-tag">Spesifik</span></div>
+      <div class="klaster-desc">Pembudidaya jamur tiram dan shiitake yang membutuhkan serbuk kayu sengon berkualitas. Margin lebih tinggi dari segmen bahan bakar. Butuh konsistensi kadar air 55–65%.</div>
+    </div>
+  </div>
+
+  <h3 style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:var(--text);margin:56px 0 20px;">📈 Strategi Penetrasi Pasar</h3>
+  <div class="strategi-timeline">
+    <div class="glass-card strategi-step tilt-card">
+      <div class="strategi-phase strategi-phase-1">Fase 1 — Bulan 1–3</div>
+      <div class="strategi-target">Bangun Track Record</div>
+      <div class="strategi-desc">Fokus pada IKM kecil (pabrik tahu, kerupuk). Batch kecil 1–3 ton. Utamakan kepuasan dan repeat order. Bangun minimal 3–5 buyer loyal.</div>
+    </div>
+    <div class="glass-card strategi-step tilt-card">
+      <div class="strategi-phase strategi-phase-2">Fase 2 — Bulan 4–8</div>
+      <div class="strategi-target">Perluas Jaringan</div>
+      <div class="strategi-desc">Masuk ke segmen alas hewan dan media jamur (margin lebih tinggi). Tambah supplier cadangan. Mulai negosiasi kontrak bulanan dengan buyer tetap.</div>
+    </div>
+    <div class="glass-card strategi-step tilt-card">
+      <div class="strategi-phase strategi-phase-3">Fase 3 — Bulan 9+</div>
+      <div class="strategi-target">Skala & Diversifikasi</div>
+      <div class="strategi-desc">Masuk ke industri wood pellet/biomassa. Pertimbangkan kemitraan dengan pabrik pengolahan. Bangun sistem kontrak jangka panjang. Evaluasi pendirian badan usaha.</div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ==================== SECTION 9: DO'S & DON'TS ==================== -->
+<section id="dos-donts" class="section">
+  <div class="section-label">09 — Panduan</div>
+  <h2 class="section-title">Do's & Don'ts</h2>
+  <p class="section-subtitle">Rambu-rambu bisnis — baca ini sebelum setiap transaksi.</p>
+
+  <div class="dos-donts-grid">
+    <div class="dos-column">
+      <div class="column-header column-header-dos">
+        <span class="column-header-icon">✅</span>
+        <span class="column-header-text">Lakukan</span>
+      </div>
+      <div class="dos-item"><span class="item-icon">💬</span><div><div class="item-category">Komunikasi & Negosiasi</div><div class="item-text">Gunakan jawaban yang tenang, jelas, dan percaya diri saat berbicara dengan buyer/supplier.</div></div></div>
+      <div class="dos-item"><span class="item-icon">🏢</span><div><div class="item-category">Komunikasi</div><div class="item-text">Jelaskan bahwa Anda menangani distribusi dan pengadaan — tidak perlu berlebihan.</div></div></div>
+      <div class="dos-item"><span class="item-icon">⚡</span><div><div class="item-category">Reputasi</div><div class="item-text">Respons cepat dan konsisten — ini yang membangun reputasi distributor terpercaya.</div></div></div>
+      <div class="dos-item"><span class="item-icon">📝</span><div><div class="item-category">Sistem Keuangan</div><div class="item-text">Catat seluruh arus uang secara real-time dan simpan semua bukti transfer (screenshot + print).</div></div></div>
+      <div class="dos-item"><span class="item-icon">🏦</span><div><div class="item-category">Keuangan</div><div class="item-text">Pisahkan rekening bisnis dari rekening pribadi dan gunakan uang transaksi hanya untuk keperluan bisnis tersebut.</div></div></div>
+      <div class="dos-item"><span class="item-icon">🔬</span><div><div class="item-category">Kualitas Produk</div><div class="item-text">Lakukan pengujian kadar air sebelum setiap pengiriman dan pastikan spesifikasi material sesuai kebutuhan industri buyer.</div></div></div>
+      <div class="dos-item"><span class="item-icon">📸</span><div><div class="item-category">Dokumentasi</div><div class="item-text">Minta dokumentasi foto sebelum dan saat loading untuk perlindungan hukum atas kondisi barang.</div></div></div>
+      <div class="dos-item"><span class="item-icon">🌱</span><div><div class="item-category">Reputasi & Kepercayaan</div><div class="item-text">Bangun reputasi dari transaksi kecil yang rapi. Buyer loyal lebih berharga dari buyer baru yang besar.</div></div></div>
+      <div class="dos-item"><span class="item-icon">📊</span><div><div class="item-category">Evaluasi</div><div class="item-text">Evaluasi setiap transaksi untuk perbaikan sistem dan catat pelajaran untuk transaksi berikutnya.</div></div></div>
+    </div>
+    <div class="donts-column">
+      <div class="column-header column-header-donts">
+        <span class="column-header-icon">❌</span>
+        <span class="column-header-text">Hindari</span>
+      </div>
+      <div class="donts-item"><span class="item-icon">💸</span><div><div class="item-category">⛔ Fatal</div><div class="item-text">Jangan keluarkan uang ke supplier sebelum DP dari buyer benar-benar masuk ke rekening.</div></div></div>
+      <div class="donts-item"><span class="item-icon">🤥</span><div><div class="item-category">⛔ Fatal</div><div class="item-text">Jangan janjikan barang ke buyer sebelum supplier benar-benar ready stock dan dikonfirmasi.</div></div></div>
+      <div class="donts-item"><span class="item-icon">💰</span><div><div class="item-category">⛔ Fatal</div><div class="item-text">Jangan kirim uang tanpa ada kepastian atau bukti asal barang yang jelas.</div></div></div>
+      <div class="donts-item"><span class="item-icon">🚀</span><div><div class="item-category">⛔ Fatal</div><div class="item-text">Jangan masuk ke volume besar tanpa pengalaman dan sistem yang matang — ini jebakan pemula.</div></div></div>
+      <div class="donts-item"><span class="item-icon">📢</span><div><div class="item-category">⚠️ Berbahaya</div><div class="item-text">Jangan overpromise kepada buyer atau supplier — sekali janji meleset, reputasi hancur.</div></div></div>
+      <div class="donts-item"><span class="item-icon">🚛</span><div><div class="item-category">⚠️ Berbahaya</div><div class="item-text">Jangan pilih ekspedisi hanya karena paling murah — pertimbangkan keandalan dan pengalaman.</div></div></div>
+      <div class="donts-item"><span class="item-icon">😰</span><div><div class="item-category">❌ Reputasi</div><div class="item-text">Hindari kata-kata ragu seperti "mungkin", "kayaknya", atau "insya Allah ya" dalam komunikasi bisnis.</div></div></div>
+      <div class="donts-item"><span class="item-icon">🏗️</span><div><div class="item-category">❌ Reputasi</div><div class="item-text">Jangan mengaku perusahaan besar padahal belum ada sistem yang mendukung — fokus pada kredibilitas nyata.</div></div></div>
+      <div class="donts-item"><span class="item-icon">🍄</span><div><div class="item-category">❌ Teknis</div><div class="item-text">Jangan gunakan kayu bergetah/berminyak (pinus, damar) untuk media tanam jamur — meracuni miselium.</div></div></div>
+      <div class="donts-item"><span class="item-icon">📄</span><div><div class="item-category">❌ Teknis</div><div class="item-text">Jangan kirim tanpa Nota Perusahaan — armada tanpa dokumen berisiko diperiksa dan ditahan di jalan.</div></div></div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ==================== SECTION 10: CHECKLIST ==================== -->
+<section id="checklist" class="section">
+  <div class="section-label">10 — Operasional</div>
+  <h2 class="section-title">Checklist Lengkap</h2>
+  <p class="section-subtitle">Centang sebelum bergerak — jangan lewatkan satu pun.</p>
+
+  <div class="search-wrap" style="margin-top:48px;">
+    <span class="search-icon">🔍</span>
+    <input type="text" class="search-input" id="checklist-search" placeholder="Cari item checklist..." oninput="filterChecklist(this.value)">
+  </div>
+
+  <div class="glass-card master-progress">
+    <div class="master-progress-title">Progress Keseluruhan</div>
+    <div class="master-progress-stats">
+      <div>
+        <span class="master-progress-count" id="master-done">0</span>
+        <span class="master-progress-label" style="color:var(--text-3);font-size:0.83rem;"> / <span id="master-total">0</span> item selesai</span>
+      </div>
+      <span style="font-family:var(--font-mono);font-size:0.82rem;color:var(--gold);" id="master-pct">0%</span>
+    </div>
+    <div class="master-progress-bar-wrap" style="margin-top:12px;">
+      <div class="master-progress-fill" id="master-bar"></div>
+    </div>
+  </div>
+
+  <div class="checklist-master">
+    <!-- Group A -->
+    <div class="glass-card checklist-group" data-group="A">
+      <div class="checklist-group-header">
+        <div class="checklist-group-title">
+          <div class="checklist-group-letter">A</div>
+          <div class="checklist-group-name">Sebelum Menerima Order</div>
+        </div>
+        <div class="progress-pill">
+          <div class="progress-bar-wrap"><div class="progress-bar-fill"></div></div>
+          <span class="progress-text">0/5</span>
+        </div>
+      </div>
+      <ul class="checklist">
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Rekening bank bisnis aktif dan terpisah dari pribadi</span></li>
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Template invoice sudah siap</span></li>
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Kontak supplier utama dan cadangan tersimpan</span></li>
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Kontak 2–3 ekspedisi tersimpan</span></li>
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Sistem pencatatan transaksi (Excel/Google Sheets) siap</span></li>
+      </ul>
+    </div>
+    <!-- Group B -->
+    <div class="glass-card checklist-group" data-group="B">
+      <div class="checklist-group-header">
+        <div class="checklist-group-title">
+          <div class="checklist-group-letter">B</div>
+          <div class="checklist-group-name">Konfirmasi ke Buyer</div>
+        </div>
+        <div class="progress-pill">
+          <div class="progress-bar-wrap"><div class="progress-bar-fill"></div></div>
+          <span class="progress-text">0/8</span>
+        </div>
+      </div>
+      <ul class="checklist">
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Harga fix sudah disepakati dan terdokumentasi</span></li>
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Volume awal sudah clear</span></li>
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Alamat lengkap penerima sudah didapat</span></li>
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Nomor kontak penerima aktif sudah tersimpan</span></li>
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Jam bongkar barang sudah diketahui</span></li>
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Sistem dan besaran DP sudah disepakati</span></li>
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Siapa yang menanggung ongkir sudah jelas</span></li>
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Jadwal kebutuhan barang sudah ada</span></li>
+      </ul>
+    </div>
+    <!-- Group C -->
+    <div class="glass-card checklist-group" data-group="C">
+      <div class="checklist-group-header">
+        <div class="checklist-group-title">
+          <div class="checklist-group-letter">C</div>
+          <div class="checklist-group-name">Sebelum Barang Jalan</div>
+        </div>
+        <div class="progress-pill">
+          <div class="progress-bar-wrap"><div class="progress-bar-fill"></div></div>
+          <span class="progress-text">0/10</span>
+        </div>
+      </div>
+      <ul class="checklist">
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">DP dari buyer sudah masuk ke rekening (cek mutasi)</span></li>
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Supplier sudah dikonfirmasi <em>ready stock</em></span></li>
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Kualitas barang sudah diverifikasi (kadar air, jenis kayu)</span></li>
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Jadwal kirim sudah disepakati dengan supplier dan ekspedisi</span></li>
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Driver dan nomor plat kendaraan sudah diketahui</span></li>
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Alamat lengkap tujuan sudah dipegang driver</span></li>
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Kontak penerima di lokasi buyer sudah tersedia</span></li>
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Nota Perusahaan dari supplier sudah ada di dalam kendaraan</span></li>
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Foto barang sebelum loading sudah diambil</span></li>
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Foto saat loading sudah diambil</span></li>
+      </ul>
+    </div>
+    <!-- Group D -->
+    <div class="glass-card checklist-group" data-group="D">
+      <div class="checklist-group-header">
+        <div class="checklist-group-title">
+          <div class="checklist-group-letter">D</div>
+          <div class="checklist-group-name">Saat Pengiriman Berlangsung</div>
+        </div>
+        <div class="progress-pill">
+          <div class="progress-bar-wrap"><div class="progress-bar-fill"></div></div>
+          <span class="progress-text">0/3</span>
+        </div>
+      </div>
+      <ul class="checklist">
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Update posisi kendaraan secara berkala</span></li>
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Buyer sudah diinformasikan estimasi waktu tiba</span></li>
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Penerima dipastikan <em>standby</em> di lokasi</span></li>
+      </ul>
+    </div>
+    <!-- Group E -->
+    <div class="glass-card checklist-group" data-group="E">
+      <div class="checklist-group-header">
+        <div class="checklist-group-title">
+          <div class="checklist-group-letter">E</div>
+          <div class="checklist-group-name">Setelah Barang Sampai</div>
+        </div>
+        <div class="progress-pill">
+          <div class="progress-bar-wrap"><div class="progress-bar-fill"></div></div>
+          <span class="progress-text">0/7</span>
+        </div>
+      </div>
+      <ul class="checklist">
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Buyer konfirmasi barang sudah diterima</span></li>
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Komplain (jika ada) sudah dicatat dan ditindaklanjuti</span></li>
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Invoice pelunasan sudah dikirimkan ke buyer</span></li>
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Pelunasan sudah masuk ke rekening</span></li>
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Semua bukti transaksi sudah diarsipkan</span></li>
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Evaluasi proses pengiriman sudah dilakukan</span></li>
+        <li class="checklist-item ripple-wrap" onclick="toggleCheck(this)"><input type="checkbox"><span class="check-box"></span><span class="check-label">Pelajaran untuk transaksi berikutnya sudah dicatat</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:32px;">
+    <button onclick="resetChecklist()" class="ripple-wrap" style="font-family:var(--font-mono);font-size:0.7rem;padding:10px 24px;border-radius:30px;border:1px solid var(--glass-border);background:var(--glass-bg);color:var(--text-3);cursor:pointer;letter-spacing:0.08em;transition:all 0.2s;overflow:hidden;position:relative;" onmouseover="this.style.borderColor='var(--danger)';this.style.color='var(--danger)'" onmouseout="this.style.borderColor='var(--glass-border)';this.style.color='var(--text-3)'">↺ Reset Semua Checklist</button>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">Sentra Timber Nusantara Lestari</div>
+    <div class="footer-brand-sub">lestari by Ibnuhyn</div>
+    <p class="footer-tagline">
+      "Bisnis yang kuat bukan dibangun dari transaksi besar pertama, tetapi dari kemampuan menjalankan setiap transaksi secara aman, detail, dan konsisten."
+    </p>
+    <div style="font-size:0.8rem;color:var(--text-3);line-height:1.8;margin-bottom:16px;">
+      Referensi data: Playbook Distribusi Serbuk Kayu & Analisis Strategis Distribusi Serbuk Kayu<br>
+      (Tangerang-Banten, 2024–2025)
+    </div>
+
+    <div class="footer-ip glass-card">
+      <strong>© 2026 ABIYYU IBNU KHAYYAN. ALL RIGHTS RESERVED.</strong><br>
+      Dokumen ini adalah karya intelektual milik Abiyyu Ibnu Khayyan dan dilindungi oleh hukum hak cipta yang berlaku di Republik Indonesia dan secara internasional. Seluruh isi, konsep, struktur, data, analisis, dan metodologi yang terkandung dalam dokumen ini — termasuk namun tidak terbatas pada panduan distribusi, analisis pasar, strategi bisnis, dan checklist operasional — adalah milik eksklusif penulis.<br><br>
+      <strong>Dilarang keras</strong> untuk memperbanyak, mendistribusikan, memodifikasi, menjual, atau menggunakan sebagian maupun seluruh isi dokumen ini dalam bentuk apapun tanpa izin tertulis dari pemilik hak cipta. Pelanggaran terhadap ketentuan ini dapat dikenakan sanksi hukum sesuai Undang-Undang No. 28 Tahun 2014 tentang Hak Cipta.
+    </div>
+
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <div>
+        <div class="footer-copy">
+          <strong>© 2026 ABIYYU IBNU KHAYYAN. ALL RIGHTS RESERVED.</strong><br>
+          Sentra Timber Nusantara Lestari — Panduan Distribusi Serbuk Kayu Profesional
+        </div>
+      </div>
+      <div class="footer-version">VERSI 1.0 — EDISI 2025</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ==================== JAVASCRIPT ==================== -->
+<script>
+// ====================================================
+// SCROLL-TRIGGERED PAGE TRANSITION (NAV CLICK)
+// ====================================================
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(a.getAttribute('href'));
+    if (!target) return;
+
+    // Flash effect on click
+    const flash = document.createElement('div');
+    flash.style.cssText = `
+      position:fixed;inset:0;background:rgba(201,150,12,0.06);
+      pointer-events:none;z-index:9000;
+      animation:quickFlash 0.4s ease forwards;
+    `;
+    document.body.appendChild(flash);
+    flash.addEventListener('animationend', () => flash.remove());
+
+    setTimeout(() => {
+      const top = target.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top, behavior: 'smooth' });
+    }, 80);
+  });
+});
+
+// Quick flash keyframe via style tag
+const style = document.createElement('style');
+style.textContent = `@keyframes quickFlash { 0%{opacity:0} 20%{opacity:1} 100%{opacity:0} }`;
+document.head.appendChild(style);
+
+// ====================================================
+// NAVIGATION & SCROLL BEHAVIOR
+// ====================================================
+const nav = document.getElementById('main-nav');
+const navLinks = document.querySelectorAll('.nav-link');
+const sections = document.querySelectorAll('[id]');
+const tracker = document.getElementById('progress-tracker');
+const trackerDots = document.querySelectorAll('.tracker-dot');
+
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+
+  // Nav style
+  nav.classList.toggle('scrolled', y > 80);
+
+  // Tracker visibility
+  tracker.classList.toggle('visible', y > 400);
+
+  // Active section detection
+  let current = '';
+  sections.forEach(s => {
+    if (y + window.innerHeight / 2 >= s.offsetTop) current = s.id;
+  });
+
+  navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + current));
+  trackerDots.forEach(d => d.classList.toggle('active', d.dataset.section === current));
+
+  // Section reveal on scroll
+  document.querySelectorAll('.section').forEach(s => {
+    const rect = s.getBoundingClientRect();
+    if (rect.top < window.innerHeight * 0.88) s.classList.add('visible');
+  });
+
+  // Price bar animation
+  document.querySelectorAll('.price-bar-fill').forEach(b => {
+    const rect = b.getBoundingClientRect();
+    if (rect.top < window.innerHeight && !b.dataset.animated) {
+      b.style.width = b.dataset.width + '%';
+      b.dataset.animated = '1';
+    }
+  });
+});
+
+// Tracker dot navigation
+trackerDots.forEach(d => {
+  d.addEventListener('click', () => {
+    const t = document.getElementById(d.dataset.section);
+    if (t) {
+      // Visual pulse on tracker click
+      d.style.transform = 'scale(2)';
+      setTimeout(() => d.style.transform = '', 400);
+      t.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+// ====================================================
+// CHECKLIST TOGGLE
+// ====================================================
+function toggleCheck(item) {
+  item.classList.toggle('checked');
+  const cb = item.querySelector('input[type="checkbox"]');
+  if (cb) cb.checked = !cb.checked;
+  createRipple(event, item);
+  item.classList.add('click-flash');
+  setTimeout(() => item.classList.remove('click-flash'), 300);
+  updateProgress();
+  saveChecklist();
+}
+
+function updateProgress() {
+  const groups = document.querySelectorAll('.checklist-group');
+  let totalDone = 0, totalAll = 0;
+  groups.forEach(g => {
+    const items = g.querySelectorAll('.checklist-item');
+    const done = g.querySelectorAll('.checklist-item.checked').length;
+    const all = items.length;
+    totalDone += done; totalAll += all;
+    const bar = g.querySelector('.progress-bar-fill');
+    const txt = g.querySelector('.progress-text');
+    if (bar) bar.style.width = all ? (done / all * 100) + '%' : '0%';
+    if (txt) txt.textContent = done + '/' + all;
+  });
+  document.getElementById('master-done').textContent = totalDone;
+  document.getElementById('master-total').textContent = totalAll;
+  const pct = totalAll ? Math.round(totalDone / totalAll * 100) : 0;
+  document.getElementById('master-pct').textContent = pct + '%';
+  document.getElementById('master-bar').style.width = pct + '%';
+}
+
+function saveChecklist() {
+  const state = [];
+  document.querySelectorAll('.checklist-item').forEach(item => state.push(item.classList.contains('checked')));
+  try { localStorage.setItem('stnl-checklist-v3', JSON.stringify(state)); } catch(e) {}
+}
+
+function loadChecklist() {
+  try {
+    const state = JSON.parse(localStorage.getItem('stnl-checklist-v3') || '[]');
+    document.querySelectorAll('.checklist-item').forEach((item, i) => {
+      if (state[i]) { item.classList.add('checked'); const cb = item.querySelector('input'); if (cb) cb.checked = true; }
+    });
+  } catch(e) {}
+  updateProgress();
+}
+
+function resetChecklist() {
+  if (!confirm('Reset semua checklist? Progress akan terhapus.')) return;
+  document.querySelectorAll('.checklist-item').forEach(item => {
+    item.classList.remove('checked');
+    const cb = item.querySelector('input'); if (cb) cb.checked = false;
+  });
+  try { localStorage.removeItem('stnl-checklist-v3'); } catch(e) {}
+  updateProgress();
+}
+
+// ====================================================
+// SEARCH CHECKLIST
+// ====================================================
+function filterChecklist(q) {
+  const query = q.toLowerCase();
+  document.querySelectorAll('.checklist-item').forEach(item => {
+    const text = item.querySelector('.check-label').textContent.toLowerCase();
+    item.style.display = text.includes(query) ? '' : 'none';
+  });
+}
+
+// ====================================================
+// TIMELINE ACCORDION
+// ====================================================
+function toggleTimeline(btn) {
+  const detail = btn.nextElementSibling;
+  const isOpen = detail.classList.contains('open');
+  detail.classList.toggle('open', !isOpen);
+  btn.classList.toggle('open', !isOpen);
+  btn.querySelector('span:first-child').textContent = isOpen ? 'Lihat Detail' : 'Sembunyikan';
+  createRipple(event, btn);
+}
+
+// ====================================================
+// ACCORDION
+// ====================================================
+function toggleAccordion(header) {
+  const item = header.parentElement;
+  const wasOpen = item.classList.contains('open');
+  document.querySelectorAll('.accordion-item.open').forEach(i => i.classList.remove('open'));
+  if (!wasOpen) item.classList.add('open');
+}
+
+// ====================================================
+// SPEC TABS
+// ====================================================
+function switchSpec(btn, panelId) {
+  document.querySelectorAll('.spec-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.spec-panel').forEach(p => p.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('spec-' + panelId).classList.add('active');
+  createRipple(event, btn);
+}
+
+// ====================================================
+// RIPPLE EFFECT
+// ====================================================
+function createRipple(e, el) {
+  if (!e || !el) return;
+  const ripple = document.createElement('div');
+  ripple.classList.add('ripple');
+  const rect = el.getBoundingClientRect();
+  const size = Math.max(rect.width, rect.height) * 2;
+  const x = (e.clientX || rect.left + rect.width / 2) - rect.left - size / 2;
+  const y = (e.clientY || rect.top + rect.height / 2) - rect.top - size / 2;
+  ripple.style.cssText = `width:${size}px;height:${size}px;left:${x}px;top:${y}px;`;
+  el.appendChild(ripple);
+  ripple.addEventListener('animationend', () => ripple.remove());
+}
+
+document.querySelectorAll('.ripple-wrap').forEach(el => {
+  el.addEventListener('click', e => createRipple(e, el));
+});
+
+// ====================================================
+// 3D TILT EFFECT ON HOVER
+// ====================================================
+document.querySelectorAll('.tilt-card').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const rect = card.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+    card.style.transform = `perspective(900px) rotateY(${x * 7}deg) rotateX(${-y * 7}deg) translateY(-4px) scale(1.01)`;
+    card.style.transition = 'transform 0.1s ease, border-color 0.3s ease, box-shadow 0.3s ease';
+  });
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = '';
+    card.style.transition = 'all 0.45s cubic-bezier(0.16,1,0.3,1)';
+  });
+  card.addEventListener('click', e => {
+    card.style.transform = 'scale(0.97)';
+    setTimeout(() => card.style.transform = '', 150);
+  });
+});
+
+// ====================================================
+// METRIC CARD CLICK RIPPLE + 3D DEPTH PULSE
+// ====================================================
+document.querySelectorAll('.metric-card').forEach(card => {
+  card.addEventListener('click', e => {
+    createRipple(e, card);
+    card.style.boxShadow = '0 0 60px rgba(201,150,12,0.4)';
+    setTimeout(() => card.style.boxShadow = '', 600);
+  });
+});
+
+// ====================================================
+// INIT
+// ====================================================
+document.addEventListener('DOMContentLoaded', () => {
+  loadChecklist();
+  window.dispatchEvent(new Event('scroll'));
+  document.querySelectorAll('.price-bar-fill').forEach(b => { b.style.width = '0'; });
+
+  // Staggered hero card entrance
+  document.querySelectorAll('.metric-card').forEach((card, i) => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(20px)';
+    setTimeout(() => {
+      card.style.transition = 'all 0.6s cubic-bezier(0.16,1,0.3,1)';
+      card.style.opacity = '1';
+      card.style.transform = '';
+    }, 1400 + i * 100);
+  });
+});
+
+window.addEventListener('load', () => {
+  setTimeout(() => window.dispatchEvent(new Event('scroll')), 150);
+});
+</script>
+</body>
+</html>
+HTMLEOF
+echo "File written successfully. Lines: $(wc -l < /home/claude/sentra-timber-premium.html)"
